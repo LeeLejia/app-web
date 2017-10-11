@@ -4,9 +4,9 @@
       <div class="qc-pt-login-content J-commonLoginContent ">
         <!--login start-->
         <div class="login-tab">
-          <h1 class="login-tab-title J-txtLoginTitle">邮箱登录</h1>
+          <h1 class="login-tab-title J-txtLoginTitle">帐号登录</h1>
           <!--邮箱手机登录　start-->
-          <div class="login-box J-loginContentBox J-qcloginBox" style="">
+          <div class="login-box J-loginContentBox J-qcloginBox">
             <div class="login-form">
               <div class="tc-msg error" style="display:none">
                 <span class="msg-icon"></span>
@@ -16,8 +16,8 @@
                 <li>
                   <div class="form-input">
                     <div class="form-unit tip-unit">
-                      <label class="input-tips" style="display: none;">邮箱地址/DNSPod账号</label>
-                      <input value="" type="text" class="qc-log-input-text lg J-username" placeholder="邮箱地址/DNSPod账号" />
+                      <label class="input-tips" style="display: none;">手机号/邮箱/昵称</label>
+                      <input value="" type="text" class="qc-log-input-text lg J-username" placeholder="手机号/邮箱/昵称" />
                       <ul class="tip-list J-mailSuggest" style="display:none;">
                       </ul>
                     </div>
@@ -28,7 +28,9 @@
                       <label class="input-tips" style="display: none;">密码</label>
                       <input type="password" class="qc-log-input-text lg J-password" placeholder="密码" />
                     </div>
-                  </div> </li>
+                  </div>
+                </li>
+                <!--验证码-->
                 <li style="display:none" class="J-vcodeArea">
                   <div class="form-input fm-security">
                     <div class="form-unit">
@@ -36,7 +38,8 @@
                       <input type="text" class="qc-log-input-text J-vcodeInput" placeholder="验证码" style="width:124px" />
                       <a href="javascript:;" class="security-num J-changeVCode"> <img class="security-img J-vcodeImg" /> </a>
                     </div>
-                  </div> </li>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="op-btn">
@@ -50,24 +53,11 @@
                   </div>
                 </div> </button>
               <div class="psw-info">
-                <a href="https://cloud.tencent.com/password/recover?s_url=https%3A%2F%2Fcloud.tencent.com%2F%3FfromSource%3Dgwzcw.455790.455790.455790%26gclid%3DEAIaIQobChMIy5mktcPn1gIVBoC9Ch1ozgemEAAYAiAAEgInuPD_BwE" class="forgot-psw J-link" hotrep="login.pc.forgotPwd">忘记密码？</a>
+                <a href="{{forgetPwd}}" class="forgot-psw J-link">忘记密码？</a>
               </div>
             </div>
           </div>
           <!--邮箱手机登录 end-->
-          <!--QQ登录示意 start-->
-          <div class="login-box qq-box J-loginContentBox J-ptloginBox" style="height: 300px; padding-bottom: 0px; display: none;">
-            <iframe id="qc_ptlogin_iframe" scrolling="no" width="100%" height="100%" frameborder="0" allowtransparency="yes"></iframe>
-          </div>
-          <div class="login-box wx-box J-loginContentBox J-wxloginBox" style="display: none; height: 260px;">
-            <div class="lg-qr-box">
-              <iframe frameborder="no" scrolling="no" style="width:100%; height:215px;" src=""></iframe>
-            </div>
-            <div class="lg-qr-txt">
-              <p> 请使用微信扫描二维码登录 <br />“腾讯云” </p>
-            </div>
-          </div>
-          <!--QQ登录示意 end-->
           <div class="outside-login">
             <div class="outside-login-tit">
               <span class="J-txtMoreLoginType">快捷登录</span>
@@ -75,8 +65,8 @@
             <div class="outside-login-con">
               <div class="outside-login-list">
                 <a class="outside-login-btn mail J-btnSwitchLoginType" href="javascript:;" data-type="email" data-hot="login.email" hotrep="login.email"> <em><i class="mail-login-icon"></i></em> <span>邮箱账号</span> </a>
-                <a class="outside-login-btn wx actived J-btnSwitchLoginType" data-type="wx" href="https://cloud.tencent.com/login/wechat?s_url=https%3A%2F%2Fcloud.tencent.com%2F%3FfromSource%3Dgwzcw.455790.455790.455790%26gclid%3DEAIaIQobChMIy5mktcPn1gIVBoC9Ch1ozgemEAAYAiAAEgInuPD_BwE" data-hot="login.wx" hotrep="login.wx"> <em><i class="wx-login-icon"></i></em> <span>微信账号</span> </a>
-                <a class="outside-login-btn wxoa actived J-btnSwitchLoginType" data-type="wxmp" href="https://cloud.tencent.com/login/mp?s_url=https%3A%2F%2Fcloud.tencent.com%2F%3FfromSource%3Dgwzcw.455790.455790.455790%26gclid%3DEAIaIQobChMIy5mktcPn1gIVBoC9Ch1ozgemEAAYAiAAEgInuPD_BwE" data-hot="login.mp" hotrep="login.mp"> <em><i class="wxoa-login-icon"></i></em> <span>微信公众号</span> </a>
+                <a class="outside-login-btn wx actived J-btnSwitchLoginType" data-type="wx" href="https://cloud.tencent.com/login/wechat?s_url=https%3A%2F%2Fcloud.tencent.com%2F%3FfromSource%3Dgwzcw.455790.455790.455790%26gclid%3DEAIaIQobChMIy5mktcPn1gIVBoC9Ch1ozgemEAAYAiAAEgInuPD_BwE" data-hot="login.wx"> <em><i class="wx-login-icon"></i></em> <span>微信账号</span> </a>
+                <a class="outside-login-btn wxoa actived J-btnSwitchLoginType" data-type="wxmp" href="https://cloud.tencent.com/login/mp?s_url=https%3A%2F%2Fcloud.tencent.com%2F%3FfromSource%3Dgwzcw.455790.455790.455790%26gclid%3DEAIaIQobChMIy5mktcPn1gIVBoC9Ch1ozgemEAAYAiAAEgInuPD_BwE" data-hot="login.mp"> <em><i class="wxoa-login-icon"></i></em> <span>微信公众号</span> </a>
                 <a class="outside-login-btn qq J-btnSwitchLoginType actived" href="javascript:;" data-type="qq" data-hot="login.qq" hotrep="login.qq"> <em><i class="qq-login-icon"></i></em> <span>QQ账号</span> </a>
               </div>
             </div>
@@ -85,7 +75,7 @@
         <!--login end-->
         <!--注册提示 start-->
         <div class="regist">
-          <p class="tag-line"> 还没有账号？ <a href="https://cloud.tencent.com/register?s_url=https%3A%2F%2Fcloud.tencent.com%2F%3FfromSource%3Dgwzcw.455790.455790.455790%26gclid%3DEAIaIQobChMIy5mktcPn1gIVBoC9Ch1ozgemEAAYAiAAEgInuPD_BwE" class="link J-link" hotrep="login.pc.register">立即注册</a> </p>
+          <p class="tag-line"> 注册新帐号？ <a href="{{register}}" class="link J-link">立即注册</a> </p>
         </div>
         <!--注册提示 end-->
       </div>

@@ -27,7 +27,7 @@ input[type=text]{-webkit-appearance:none;}
 .qc-pt-login-content{position:relative;display:inline-block;text-align:center;}
 .qc-pt-login-content .link{color:#fff;}
 .qc-pt-login-content .link:hover{text-decoration:underline;}
-.lg-content{position:absolute;right:10px;top:120px;}
+.lg-content{position:absolute;right:25px;top:120px;}
 .qc-pt-login-content .login-tab{display:inline-block;background:#fff;width:430px;border-radius:4px;}
 .login-tab-title{font-size:28px;font-weight:400;padding-top:25px;color:#333;}
 .login-box .login-form{padding-top:25px;}
@@ -82,5 +82,13 @@ input[type=text]{-webkit-appearance:none;}
 /*! CSS Used keyframes */
 @-webkit-keyframes bouncedelay{0%,100%,80%{-webkit-transform:scale(.5);opacity:1;}40%{-webkit-transform:scale(1);opacity:.8;}}
 @keyframes bouncedelay{0%,100%,80%{-webkit-transform:scale(.5);transform:scale(.5);opacity:1;}40%{transform:scale(1);-webkit-transform:scale(1);opacity:.8;}}
-
-.out-contain{background: black;}
+/*界面容器*/
+.out-contain{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #fee;
+  background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/login-regist/css/img/qcloud-login-bg.jpg?nowebp);
+}
