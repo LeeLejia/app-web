@@ -1,4 +1,4 @@
-<div id="ngdialog1" class="ngdialog ngdialog-theme-default ng-scope" role="alertdialog"   [hidden]="state.hidden">
+<div *ngIf="state" id="ngdialog1" class="ngdialog ngdialog-theme-default ng-scope" role="alertdialog"   [hidden]="hidden">
   <div class="ngdialog-overlay" (click)="state.click_outside();"></div>
   <div class="ngdialog-content" role="document">
     <div class="page-dialog-wrap">

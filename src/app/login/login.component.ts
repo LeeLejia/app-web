@@ -6,6 +6,7 @@ import {
 import {config} from '../../config/config';
 import {MeditorService} from '../services/meditor.service';
 import {TestComponent} from '../test/test.component';
+import {AuthenticationService} from "../services/authentication.service";
 
 @Component({
   selector: 'app-login',
@@ -16,8 +17,17 @@ export class LoginComponent {
 
   forgetPwd = config.urls.forgetPwd;
   register = config.urls.register;
-  constructor(private meditor: MeditorService) {
+  account = '';
+  password = '';
+  constructor(private meditor: MeditorService, private auth: AuthenticationService) {
   }
+  login() {
+    this.auth.login({
+      account: this.account,
+      password: this.password,
+    }).subscribe(res => {});
+  }
+
   taggle() {
     this.meditor.push({
       id: 'alert',

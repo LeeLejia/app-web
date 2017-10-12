@@ -19,8 +19,8 @@ export class ToastComponent {
   }
 }
 export interface ToastMsg {
-  hidden: boolean;
+  hidden?: boolean;
   msg: string;
-  type: 'warn'| 'info'| 'error';
-  durtion: 'short'| 'long'| 'never';
+  type?: 'warn'| 'info'| 'error';
+  duration?: 'short'| 'long'| 'never';
 }

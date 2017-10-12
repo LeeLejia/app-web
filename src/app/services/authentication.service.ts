@@ -4,11 +4,13 @@ import { Observable } from 'rxjs/Observable';
 import { Router, ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/map';
 import utils from '../../utils/utils';
-import {config} from "../../config/config";
+import {config} from '../../config/config';
+import {MeditorService} from './meditor.service';
+import {AlertMsg} from '../share/alert/alert.component';
 
 @Injectable()
 export class AuthenticationService {
-    constructor(private http: Http, private router: Router) { }
+    constructor(private http: Http, private router: Router, private meditor: MeditorService) { }
     user: null;
     /**
      * 获取登录用户信息
@@ -27,9 +29,9 @@ export class AuthenticationService {
      */
     login(params) {
         const headers = new Headers();
-        console.log(`${utils.getApiPrefix()}${config.urls.login}`);
+        console.log(`${utils.getApiPrefix()}/${config.urls.login}`);
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        return this.http.post(`${utils.getApiPrefix()}/login`, utils.parseParam({
+        return this.http.post(`${utils.getApiPrefix()}${config.urls.login}`, utils.parseParam({
             ...params,
             osType: 'web'
         }), {
@@ -50,35 +52,29 @@ export class AuthenticationService {
                   }else {
                     this.router.navigate([config.roles.common.home]);
                   }
+                }else {
+                  const msg: AlertMsg = {title: '登录失败', content: ret.data.msg || '请检查网络是否连接？'};
+                  this.meditor.push({id: 'alert', body: msg});
                 }
                 return ret;
             });
     }
     /**
-     * 注销
+     * 注销帐号
      */
     logout() {
         const user = this.getUser();
         if (user) {
-            const url = `${utils.getApiPrefix()}/${config.urls.logout}?${utils.parseParam({
-                account: user.account,
-                osType: 'web',
-                roleType: user.userType || 'member',
-                token: localStorage.getItem('currentUser')
-            })}`;
-            return this.http.get(url).subscribe(response => {
-                localStorage.setItem('currentUser', '');
-                localStorage.setItem('userInfo', '');
-                if (user.userType === 'super' || user.userType === 'admin' ) {
-                    this.router.navigate(['/login']);
-                }
-                if (user.userType === 'member' || user.userType === 'employee' || !user.userType) {
-                    this.router.navigate(['/orglogin']);
-                }
-            });
-
-        } else {
-            this.router.navigate([config.urls.login]);
+            const url = `${utils.getApiPrefix()}${config.urls.logout}`;
+            return this.http.post(url, utils.parseParam({
+              session: localStorage.getItem('session'),
+              token: localStorage.getItem('token'),
+              osType: 'web',
+            })).subscribe(response => {});
         }
+      this.router.navigate([config.urls.login]);
+      localStorage.removeItem('user');
+      localStorage.removeItem('token');
+      localStorage.removeItem('session');
     }
 }

@@ -56,13 +56,13 @@ export class AlertComponent implements OnDestroy {
   }
 }
 export interface AlertMsg {
-  hidden: boolean;
   title: string;
   content: string;
-  cancelEvn: () => {};
-  confirmEvn: () => {};
-  outsideEvn: () => {};
-  closeEvn: () => {};
-  buttons: {name: string, handle: () => {}}[];
+  hidden?: boolean;
+  cancelEvn?: () => {};
+  confirmEvn?: () => {};
+  outsideEvn?: () => {};
+  closeEvn?: () => {};
+  buttons?: {name: string, handle: () => {}}[];
 }
 

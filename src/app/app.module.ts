@@ -6,6 +6,16 @@ import {AlertComponent} from './share/alert/alert.component';
 import {ContainerComponent} from './app';
 import {ModalDialogComponent} from './share/modal-dialog/modal-dialog.component';
 import {TestComponent} from './test/test.component';
+import {FormsModule} from '@angular/forms';
+import {AuthenticationService} from './services/authentication.service';
+import {Http, HttpModule} from '@angular/http';
+import {Router, RouterModule} from '@angular/router';
+import {config} from '../config/config';
+
+
+export const routers = [
+  {path: config.urls.login.substr(1), component: LoginComponent},
+];
 
 @NgModule({
   declarations: [
@@ -20,9 +30,12 @@ import {TestComponent} from './test/test.component';
     TestComponent,
   ],
   imports: [
-    BrowserModule
+    HttpModule,
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routers),
   ],
-  providers: [MeditorService],
+  providers: [MeditorService, AuthenticationService],
   bootstrap: [ContainerComponent]
 })
-export class AppModule { }
+export class AppModule {}

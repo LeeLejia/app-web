@@ -72,8 +72,8 @@ export class ModalDialogComponent implements OnDestroy {
   }
 }
 export interface ModalMsg {
-  hidden: boolean;
-  closeEvn: () => {};
-  outsideEvn: () => {};
+  hidden?: boolean;
+  closeEvn?: () => {};
+  outsideEvn?: () => {};
   view: Type<Component>;
 }
