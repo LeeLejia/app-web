@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Http, Headers} from '@angular/http';
+import { Router} from '@angular/router';
 import 'rxjs/add/operator/map';
 import utils from '../../utils/utils';
 import {config} from '../../config/config';
@@ -22,7 +21,6 @@ export class AuthenticationService {
         }
         return null;
     }
-
     /**
      * 登录
      * @param params
@@ -39,7 +37,7 @@ export class AuthenticationService {
             })
             .map(response => {
                 const ret = response.json();
-                if (ret.codes === 200) {
+                if (ret.code === 200) {
                   localStorage.setItem('token', ret.data.token);
                   localStorage.setItem('session', ret.data.session);
                   localStorage.setItem('user', JSON.stringify(ret.data.user));
@@ -53,7 +51,7 @@ export class AuthenticationService {
                     this.router.navigate([config.roles.common.home]);
                   }
                 }else {
-                  const msg: AlertMsg = {title: '登录失败', content: ret.data.msg || '请检查网络是否连接？'};
+                  const msg: AlertMsg = {title: '登录失败', content: ret.msg || '请检查网络是否连接？', confirmEvn: () => {}};
                   this.meditor.push({id: 'alert', body: msg});
                 }
                 return ret;

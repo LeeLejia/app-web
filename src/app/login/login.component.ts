@@ -24,7 +24,7 @@ export class LoginComponent {
   login() {
     this.auth.login({
       account: this.account,
-      password: this.password,
+      pwd: this.password,
     }).subscribe(res => {});
   }
 

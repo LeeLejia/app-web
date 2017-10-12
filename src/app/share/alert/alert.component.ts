@@ -16,6 +16,7 @@ export class AlertComponent implements OnDestroy {
       if (msg.id === 'alert') {
         this.state = msg.body as AlertMsg;
         this.state.hidden = false;
+        this.hidden = false;
       }
     });
   }
@@ -31,6 +32,7 @@ export class AlertComponent implements OnDestroy {
       this.state.cancelEvn();
     }
     this.state.hidden = true;
+    this.hidden = true;
   }
   // 按确定按钮
   clickConfirm() {
@@ -38,6 +40,7 @@ export class AlertComponent implements OnDestroy {
       this.state.confirmEvn();
     }
     this.state.hidden = true;
+    this.hidden = true;
   }
   // 关闭窗口
   close() {
@@ -45,6 +48,7 @@ export class AlertComponent implements OnDestroy {
       this.state.closeEvn();
     }
     this.state.hidden = true;
+    this.hidden = true;
   }
   // 点击了非内容区
   click_outside() {
@@ -52,6 +56,7 @@ export class AlertComponent implements OnDestroy {
       this.state.outsideEvn();
     }else {
       this.state.hidden = true;
+      this.hidden = true;
     }
   }
 }
@@ -59,10 +64,10 @@ export interface AlertMsg {
   title: string;
   content: string;
   hidden?: boolean;
-  cancelEvn?: () => {};
-  confirmEvn?: () => {};
-  outsideEvn?: () => {};
-  closeEvn?: () => {};
+  cancelEvn?: Function;
+  confirmEvn?: Function;
+  outsideEvn?: Function;
+  closeEvn?: Function;
   buttons?: {name: string, handle: () => {}}[];
 }
 

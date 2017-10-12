@@ -1,8 +1,8 @@
 export const config = {
   protocol : 'http',
   host: 'localhost',
-  port: 8080,
-  proName: 'my-app',
+  port: 80,
+  proName: 'my-site',
   urls: {
     forgetPwd: '',
     register: '',
