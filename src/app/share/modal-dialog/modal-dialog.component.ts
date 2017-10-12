@@ -12,20 +12,19 @@ import {Subscription} from 'rxjs/Subscription';
 })
 export class ModalDialogComponent implements OnDestroy {
 
+  @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
   componentRef: ComponentRef<Component>;
   closeEvn: Function = null;
   outsideEvn: Function = null;
   temp = '';
   hidden = true
-  @ViewChild('container', { read: ViewContainerRef })
-  container: ViewContainerRef;
   subscription: Subscription = null;
   constructor(private meditor: MeditorService, private resolver: ComponentFactoryResolver) {
     this.subscription = meditor.getObservable().subscribe(news => {
       if (news.id === 'modal-dialog') {
         this.closeEvn = news.body.closeEvn || null;
         if (news.body.temp) {
-          this.container.createEmbeddedView(news.body.temp);
+          this.createComponent(news.body.temp);
         }
         this.hidden = false;
       }
@@ -35,6 +34,9 @@ export class ModalDialogComponent implements OnDestroy {
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
+    }
+    if (this.componentRef.destroy()) {
+      this.componentRef.destroy();
     }
   }
 

@@ -13,8 +13,7 @@ import {AlertComponent} from '../share/alert/alert.component';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  @ViewChild('container2', {read: ViewContainerRef}) viewContainer;
-  @ViewChild('alertContainer', { read: ViewContainerRef }) container: ViewContainerRef;
+
   forgetPwd = config.urls.forgetPwd;
   register = config.urls.register;
   constructor(private meditor: MeditorService) {
@@ -39,12 +38,8 @@ export class LoginComponent {
       id: 'modal-dialog',
       body: {
         type: 1,
-        temp: this.target,
+        temp: LoginComponent,
       },
     });
-  }
-
-  ngOnDestroy() {
-    this.componentRef.destroy()
   }
 }
