@@ -1,5 +1,6 @@
 import {
-  Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, ElementRef, Input, OnDestroy, OnInit, ViewChild,
+  Component, ComponentFactory, ComponentFactoryResolver, ComponentRef, OnDestroy, Type,
+  ViewChild,
   ViewContainerRef
 } from '@angular/core';
 import {MeditorService} from '../../services/meditor.service';
@@ -16,17 +17,22 @@ export class ModalDialogComponent implements OnDestroy {
   componentRef: ComponentRef<Component>;
   closeEvn: Function = null;
   outsideEvn: Function = null;
-  temp = '';
-  hidden = true
+  hidden = true;
   subscription: Subscription = null;
   constructor(private meditor: MeditorService, private resolver: ComponentFactoryResolver) {
-    this.subscription = meditor.getObservable().subscribe(news => {
-      if (news.id === 'modal-dialog') {
-        this.closeEvn = news.body.closeEvn || null;
-        if (news.body.temp) {
-          this.createComponent(news.body.temp);
+    this.subscription = meditor.getObservable().subscribe(msg => {
+      if (msg.id === 'modal-dialog') {
+        const news = msg.body as ModalMsg;
+        this.closeEvn = news.closeEvn || null;
+        // 关闭弹窗
+        if (news.hidden) {
+          this.hidden = true;
+          return;
         }
-        this.hidden = false;
+        if (news.view) {
+          this.hidden = false;
+          this.createComponent(news.view);
+        }
       }
     });
   }
@@ -35,16 +41,16 @@ export class ModalDialogComponent implements OnDestroy {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
-    if (this.componentRef.destroy()) {
+    if (this.componentRef) {
       this.componentRef.destroy();
     }
   }
 
   // 创建自定义组件
-  createComponent(component: Component) {
+  createComponent(componentType: Type<Component>) {
     this.container.clear();
     const factory: ComponentFactory<Component> =
-      this.resolver.resolveComponentFactory(Component);
+      this.resolver.resolveComponentFactory(componentType);
     this.componentRef = this.container.createComponent(factory);
   }
 
@@ -63,4 +69,10 @@ export class ModalDialogComponent implements OnDestroy {
       this.hidden = true;
     }
   }
+}
+export interface ModalMsg {
+  hidden: boolean;
+  closeEvn: () => {};
+  outsideEvn: () => {};
+  view: Type<Component>;
 }

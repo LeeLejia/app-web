@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import {config} from '../../config/config';
 import {MeditorService} from '../services/meditor.service';
-import {AlertComponent} from '../share/alert/alert.component';
+import {TestComponent} from '../test/test.component';
 
 @Component({
   selector: 'app-login',
@@ -24,12 +24,16 @@ export class LoginComponent {
       body: {
         title: '温馨提示！',
         content: '测试内容！！',
-        cancelEvn: function() {
+        cancelEvn: () => {
           alert('点击了取消！'); },
-        confirmEvn: function() {
+        confirmEvn: () => {
           alert('点击了确定！'); },
-        closeEvn: function() {
+        closeEvn: () => {
           alert('点击了关闭！'); },
+        buttons: [
+          {name: 'a button', handle: () => {alert('按了A按钮！'); }},
+          {name: 'b button', handle: () => {alert('按了B按钮！'); }},
+        ],
       },
     });
   }
@@ -37,8 +41,7 @@ export class LoginComponent {
     this.meditor.push({
       id: 'modal-dialog',
       body: {
-        type: 1,
-        temp: LoginComponent,
+        view: TestComponent,
       },
     });
   }

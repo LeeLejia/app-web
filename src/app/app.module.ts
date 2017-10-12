@@ -5,6 +5,7 @@ import {MeditorService} from './services/meditor.service';
 import {AlertComponent} from './share/alert/alert.component';
 import {ContainerComponent} from './app';
 import {ModalDialogComponent} from './share/modal-dialog/modal-dialog.component';
+import {TestComponent} from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,11 @@ import {ModalDialogComponent} from './share/modal-dialog/modal-dialog.component'
     AlertComponent,
     ContainerComponent,
     ModalDialogComponent,
+    TestComponent,
+  ],
+  // 声明需要模式框加载的组件
+  entryComponents: [
+    TestComponent,
   ],
   imports: [
     BrowserModule

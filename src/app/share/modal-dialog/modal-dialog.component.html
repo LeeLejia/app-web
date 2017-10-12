@@ -1,23 +1,9 @@
-<div id="ngdialog1" class="ngdialog ngdialog-theme-default ng-scope" role="alertdialog"   [hidden]="hidden">
+<div id="ngdialog1" class="ngdialog ngdialog-theme-default ng-scope" [hidden]="hidden">
   <div class="ngdialog-overlay" (click)="click_outside();"></div>
   <div class="ngdialog-content" role="document">
     <div class="page-dialog-wrap">
       <div class="page-dialog-content">
         <!--内容区-->
-        <!--消息提示框，标题，内容，确定，取消，关闭-->
-        <div *ngIf="alert_type===0">
-          <div class="mgb-l ng-binding">
-            <p *ngIf="title" style="color: #000;margin-top:-6px;position: fixed;top:20px;left:20px;">{{title}}</p>
-            <p>{{content}}</p>
-          </div>
-          <div class="text-center pd-v-s">
-            <button *ngIf="cancelEvn" type="button" class="btn btn-gray ng-binding" (click)="clickCancel();">取消</button>
-            <button *ngIf="confirmEvn" class="btn btn-blue ng-binding" (click)="clickConfirm();">确定</button>
-          </div>
-        </div>
-        <div *ngIf="alert_type===1" innerHTML="{{temp}}">
-
-        </div>
         <div #container></div>
         <!--内容区-->
       </div>

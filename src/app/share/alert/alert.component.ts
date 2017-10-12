@@ -8,29 +8,27 @@ import {Subscription} from 'rxjs/Subscription';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent implements OnDestroy {
-
-  // 0是通知框
-  alert_type = 0;
   title = '';
   content = '';
   hidden= true;
   cancelEvn: Function = null;
   confirmEvn: Function = null;
+  buttons: {name: string, handle: () => {}}[] = null;
   closeEvn: Function = null;
   outsideEvn: Function = null;
   temp = '';
 
   subscription: Subscription = null;
   constructor(private meditor: MeditorService) {
-    this.subscription = meditor.getObservable().subscribe(news => {
-      if (news.id === 'alert') {
-        this.alert_type = news.body.type || 0;
-        this.title = news.body.title || '提示';
-        this.content = news.body.content || '确定操作？';
-        this.cancelEvn = news.body.cancelEvn || null;
-        this.confirmEvn = news.body.confirmEvn || null;
-        this.closeEvn = news.body.closeEvn || null;
-        this.temp = news.body.temp || '';
+    this.subscription = meditor.getObservable().subscribe(msg => {
+      if (msg.id === 'alert') {
+        const news = msg.body as AlertMsg;
+        this.title = news.title || '提示';
+        this.content = news.content || '确定操作？';
+        this.cancelEvn = news.cancelEvn || null;
+        this.confirmEvn = news.confirmEvn || null;
+        this.closeEvn = news.closeEvn || null;
+        this.buttons = news.buttons || null;
         this.hidden = false;
       }
     });
@@ -71,3 +69,13 @@ export class AlertComponent implements OnDestroy {
     }
   }
 }
+export interface AlertMsg {
+  hidden: boolean;
+  title: string;
+  content: string;
+  cancelEvn: () => {};
+  confirmEvn: () => {};
+  closeEvn: () => {};
+  buttons: {name: string, handle: () => {}}[];
+}
+
