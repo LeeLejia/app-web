@@ -13,7 +13,7 @@ export class MeditorService {
   public getObservable (): Observable<{id: string, body: any}> {
     return this.subject.asObservable();
   }
-  // 发送信息
+  // 推送信息
   public push(msg: {id: string, body: any}) {
     this.subject.next(msg);
   }
