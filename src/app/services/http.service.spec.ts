@@ -20,12 +20,12 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 describe('Http.service', () => {
-    let httpservice:   HttpService
+    let httpservice:   HttpService;
 
     class Body {  //提供json方法;
         code: number = 403;
         msg: string = 'SUCCESS';
-        data: any = ''
+        data: any = '';
         json(): any {
             return {
                "code":this.code,
@@ -46,7 +46,7 @@ describe('Http.service', () => {
         "state": 1,
         "updatedAt": "2017-07-16T00:00:00Z",
         "createdAt": "2017-07-16T00:00:00Z"
-    }
+    };
     localStorage.setItem('userInfo', JSON.stringify(user));
 
     let mockbody = new Body();
@@ -117,7 +117,7 @@ describe('Http.service', () => {
             imports: [HttpModule]
         })
 
-    })
+    });
 
     /**
      * @param url
@@ -203,4 +203,4 @@ describe('Http.service', () => {
             httpservice.get().subscribe(res => expect(res.codes).toEqual(403));
             localStorage.setItem('userInfo', JSON.stringify(user));
         }));
-})
+});
