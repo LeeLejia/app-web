@@ -13,7 +13,8 @@ import {Subscription} from 'rxjs/Subscription';
 })
 export class ModalDialogComponent implements OnDestroy {
 
-  @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
+  @ViewChild('container', { read: ViewContainerRef })
+  container: ViewContainerRef;
   componentRef: ComponentRef<Component>;
   closeEvn: Function = null;
   outsideEvn: Function = null;

@@ -1,0 +1,9 @@
+<div class="cg flash center active" ng-class="{active: messages &amp;&amp; messages.length>0}" id="global-flash">
+  <i class="ui close icon" ng-click="onClose()"></i>
+  <div class="outer">
+<div class="active message success" ng-repeat="message in messages.slice(0,limit)" ng-switch="message.status">
+  <i class="ui smile icon ng-scope" ng-switch-when="success"></i>
+  <span ng-click="onMessageClick($event)" ng-bind-html="message.content" class="ng-binding">个人信息更新成功！</span>
+  </div>
+  </div>
+</div>

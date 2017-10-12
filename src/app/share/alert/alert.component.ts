@@ -8,28 +8,14 @@ import {Subscription} from 'rxjs/Subscription';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent implements OnDestroy {
-  title = '';
-  content = '';
-  hidden= true;
-  cancelEvn: Function = null;
-  confirmEvn: Function = null;
-  buttons: {name: string, handle: () => {}}[] = null;
-  closeEvn: Function = null;
-  outsideEvn: Function = null;
-  temp = '';
-
+  state: AlertMsg = null;
+  hidden = true;
   subscription: Subscription = null;
   constructor(private meditor: MeditorService) {
     this.subscription = meditor.getObservable().subscribe(msg => {
       if (msg.id === 'alert') {
-        const news = msg.body as AlertMsg;
-        this.title = news.title || '提示';
-        this.content = news.content || '确定操作？';
-        this.cancelEvn = news.cancelEvn || null;
-        this.confirmEvn = news.confirmEvn || null;
-        this.closeEvn = news.closeEvn || null;
-        this.buttons = news.buttons || null;
-        this.hidden = false;
+        this.state = msg.body as AlertMsg;
+        this.state.hidden = false;
       }
     });
   }
@@ -41,31 +27,31 @@ export class AlertComponent implements OnDestroy {
 
   // 按取消按钮
   clickCancel() {
-    if (this.cancelEvn) {
-      this.cancelEvn();
+    if (this.state.cancelEvn) {
+      this.state.cancelEvn();
     }
-    this.hidden = true;
+    this.state.hidden = true;
   }
   // 按确定按钮
   clickConfirm() {
-    if (this.confirmEvn) {
-      this.confirmEvn();
+    if (this.state.confirmEvn) {
+      this.state.confirmEvn();
     }
-    this.hidden = true;
+    this.state.hidden = true;
   }
   // 关闭窗口
   close() {
-    if (this.closeEvn) {
-      this.closeEvn();
+    if (this.state.closeEvn) {
+      this.state.closeEvn();
     }
-    this.hidden = true;
+    this.state.hidden = true;
   }
   // 点击了非内容区
   click_outside() {
-    if (this.outsideEvn) {
-      this.outsideEvn();
+    if (this.state.outsideEvn) {
+      this.state.outsideEvn();
     }else {
-      this.hidden = true;
+      this.state.hidden = true;
     }
   }
 }
@@ -75,6 +61,7 @@ export interface AlertMsg {
   content: string;
   cancelEvn: () => {};
   confirmEvn: () => {};
+  outsideEvn: () => {};
   closeEvn: () => {};
   buttons: {name: string, handle: () => {}}[];
 }
