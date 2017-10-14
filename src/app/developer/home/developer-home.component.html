@@ -1,6 +1,4 @@
-<html>
-<head></head>
-<body class="web-app page-thumbnail">
+<div class="web-app page-thumbnail">
 <div id="_main_ui_root" class="layout-wrapper module-disk">
   <div id="_main_fixed_header" class="layout-header">
     <div class="layout-header-inner">
@@ -145,20 +143,7 @@
                     </div>
                   </div>
                 </div>
-                <ul class="with-border">
-                  <!-- [ATTENTIN!!] 没有会员添加 .fail -->
-                  <li class="main acct-item j-vip-state fail" style="visibility: visible;"> <span class="txt j-vip-date">开通会员，尊享特权</span>
-                    <!-- [ATTENTION!!] 文案：开通/续费 --> <a href="javascript: void(0);" class="btn btn-m btn-vip j-vip-btn"><span class="j-vip-txt">开通</span>会员</a> </li>
-                  <!--@capacity_purchase-->
-                  <li id="_main_purchase_capacity" class="acct-item main"> <span class="txt">购买容量</span>
-                    <!-- 新增！！ --> <span class="tag tag-fornew"></span> </li>
-                  <li id="_main_pwd_locker" class="acct-item"><span class="txt"><span class="j-pwd-state">开启</span>独立密码</span></li>
-                  <li id="_main_safebox_pwd" class="acct-item" style="display: none;"><span class="txt">修改保险箱密码</span></li>
-                  <li id="_main_feedback" class="acct-item"><span class="txt">帮助与反馈</span></li>
-                  <a href="//www.weiyun.com/complaint.html" target="_blank"><li id="_main_copyright_complaint" class="acct-item main"><span class="txt">投诉指引</span></li></a>
-                  <li id="_main_download" class="acct-item main" style=""><span class="txt">下载客户端</span></li>
-                  <li id="_main_logout" class="acct-item"><span class="txt">退出登录</span></li>
-                </ul>
+
               </div>
             </div>
             <!-- 用户信息 e -->
@@ -170,10 +155,6 @@
         <div id="_main_nav_aside_box" class="layout-aside-bd" style="height: 745px; overflow-y: hidden;">
           <!-- 菜单 s -->
           <div id="_main_nav_aside_wrap" class="mod-menu" style="width: 100%;">
-            <div class="add-in j-vip-state fail" style="visibility: visible;">
-              <!-- 开通会员 | 续费会员 -->
-              <a href="javascript: void(0);" class="btn btn-m btn-vip"><span class="j-vip-txt">开通</span>会员</a>
-            </div>
             <!-- 最近s -->
             <div class="menu-item">
               <div class="menu-item-bd">
@@ -237,389 +218,356 @@
           </div>
           <!-- 菜单 s -->
         </div>
-        <!-- layout-aside-bd e -->
-        <!-- layout-aside-ft s -->
-        <div class="layout-aside-ft" style="display: block;">
-          <div class="mod-pro j-ad-board">
-            <div class="pro-hd j-ad-board-hd">
-              <a class="btn-close j-ad-board-close-btn" href="javascript:void(0)" title="关闭"></a>
-            </div>
-            <div class="pro-bd j-ad-board-bd">
-              <a class="j-ad-board-bd-a" href="//mobile.qzone.qq.com/l?g=3547" target="_blank"><img class="pro-img j-ad-board-bd-img" src="//qzonestyle.gtimg.cn/qzone/space_item/boss_pic/2557_2017_2/1488181409233_410877.png" alt="开通微云会员 赠送半年" /></a>
-            </div>
-          </div>
-        </div>
-        <!-- layout-aside-hd e -->
       </div>
       <!-- 左侧栏 e -->
       <!-- 主要内容 s -->
-      <div class="layout-main">
-        <div id="_main_hd" class="layout-main-hd">
-          <div id="_main_bar2" class="mod-act-panel" style="opacity: 1;">
-            <div id="_disk_file_path" class="act-panel-inner cleafix" style="">
-              <div class="mod-check">
-                <i id="_disk_all_checker" data-file-check="" class="icon icon-checkbox icon-check-s"></i>
-              </div>
-              <!-- 面包屑导航 s -->
-              <!-- 面包屑导航 -->
-              <div class="mod-breadcrumb">
-                <ul data-inner="" class="breadcrumb clearfix">
-                  <li data-cur="" tabindex="0" hidefocus="on" class="item cur"> <a href="javascript:void(0)">微云</a></li>
-                </ul>
-              </div>
-              <!-- 面包屑导航 e -->
-            </div>
-          </div>
-        </div>
-        <div id="_main_content" class="layout-main-bd" style="height: 791px; opacity: 1;">
-          <div id="_main_box" class="inner" style="height: 100%">
-            <div id="_disk_body" class="mod-list-group">
-              <div class="list-group-bd">
-                <!-- 空目录时的提示 -->
-                <div id="_disk_files_empty" class="empty-box" style="display: none;">
-                  <div class="status-inner">
-                    <i class="icon icon-nofile"></i>
-                    <h2 class="title">暂无文件</h2>
-                    <p class="txt">请点击右上角的“添加”按钮添加</p>
-                  </div>
-                </div>
-                <ul id="list_disk_files" class="list-group">
-                </ul>
-              </div>
-            </div>
-            <div id="_thumb_disk_body" data-label-for-aria="文件缩略图内容区域">
-              <div class="mod-item-list">
-                <ul id="thumb_folders_disk_files" class="item-list clearfix">
-                  <li id="thumb_disk_file_item_d89ea6556f4a363063fb89a031343629" data-file-id="d89ea6556f4a363063fb89a031343629" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="QQ">QQ</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea65525d6fee520d9a6387ff051b6" data-file-id="d89ea65525d6fee520d9a6387ff051b6" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="图片资料">图片资料</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655d06ccd6fd712da38008dad44" data-file-id="d89ea655d06ccd6fd712da38008dad44" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="重要资源">重要资源</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea6558708347efa7f4096dd3b5254" data-file-id="d89ea6558708347efa7f4096dd3b5254" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="实用软件">实用软件</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea6552f272b9805768a72283c4ab5" data-file-id="d89ea6552f272b9805768a72283c4ab5" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="大学记录">大学记录</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea6555531d9a2aa23e9519a68ac2a" data-file-id="d89ea6555531d9a2aa23e9519a68ac2a" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="杂物">杂物</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea6556ade335e95e5198dcb41ab56" data-file-id="d89ea6556ade335e95e5198dcb41ab56" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="软件成品">软件成品</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655f8d93947101d5bbdfa6d7a5c" data-file-id="d89ea655f8d93947101d5bbdfa6d7a5c" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="编程资料">编程资料</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655e2f17bd90ad5181ffc901597" data-file-id="d89ea655e2f17bd90ad5181ffc901597" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="课程资料">课程资料</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655fcde35a81fcfb6179ac77a65" data-file-id="d89ea655fcde35a81fcfb6179ac77a65" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="其它">其它</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea6559d8a9eed12ffc0eda20662df" data-file-id="d89ea6559d8a9eed12ffc0eda20662df" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="文本资料">文本资料</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655fdf4cb0f5e1ae8d58929ef0f" data-file-id="d89ea655fdf4cb0f5e1ae8d58929ef0f" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="群共享文件">群共享文件</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655848bf66232b9a92257787af8" data-file-id="d89ea655848bf66232b9a92257787af8" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="声音资料">声音资料</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655307d425b77012fff91d403dd" data-file-id="d89ea655307d425b77012fff91d403dd" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="视频资料">视频资料</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                  <li id="thumb_disk_file_item_d89ea655c381004ac158516701f0027d" data-file-id="d89ea655c381004ac158516701f0027d" class="item ui-draggable ui-droppable" style="width: 185px;">
-                    <div data-action="enter" class="inner">
-                      <i class="icon icon-m icon-file-m"></i>
-                      <span class="txt" data-name="file_name" title="重要信息">重要信息</span>
-                    </div> <i data-file-check="" class="icon icon-check-m"></i> </li>
-                </ul>
-              </div>
-              <div class="mod-figure-list">
-                <ul id="thumb_disk_files" class="figure-list clearfix">
-                  <li id="thumb_disk_file_item_fa6b7d61-7dd1-478b-abdb-3ffd74539e2e" data-file-id="fa6b7d61-7dd1-478b-abdb-3ffd74539e2e" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-zip-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-zip-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="14059913.7z">14059913.7z </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_9cbd327e-891e-4bb0-99b7-fc0c2dded3af" data-file-id="9cbd327e-891e-4bb0-99b7-fc0c2dded3af" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="webdata.exe">webdata.exe </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_4c4a0ee9-88d7-417e-b8f0-5a24fea07e50" data-file-id="4c4a0ee9-88d7-417e-b8f0-5a24fea07e50" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="客户端测试程序.exe">客户端测试程序.exe </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_ec2bacf2-8e14-4160-b187-b3825c7ed359" data-file-id="ec2bacf2-8e14-4160-b187-b3825c7ed359" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-txt-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-txt-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="collector.txt">collector.txt </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_3c136728-4c4b-44a1-acde-e2fdfb6b573d" data-file-id="3c136728-4c4b-44a1-acde-e2fdfb6b573d" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="MySql.Data.dll">MySql.Data.dll </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_3f19e9c8-b59f-43cd-aaa4-459db0f3b4c1" data-file-id="3f19e9c8-b59f-43cd-aaa4-459db0f3b4c1" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="stmp_test.exe">stmp_test.exe </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_cb05e995-1eb6-4043-ada6-441f9a507218" data-file-id="cb05e995-1eb6-4043-ada6-441f9a507218" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="QrExtract.exe">QrExtract.exe </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_832914d9-f1ee-4d85-a61d-bab448b58130" data-file-id="832914d9-f1ee-4d85-a61d-bab448b58130" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-code-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-code-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="config.ini">config.ini </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_ac6e1871-9a11-4a29-83c3-bb37ea1cb258" data-file-id="ac6e1871-9a11-4a29-83c3-bb37ea1cb258" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-doc-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-doc-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="h3c速记.doc">h3c速记.doc </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_8922bc91-c1a6-4db3-92a2-8de479b035a5" data-file-id="8922bc91-c1a6-4db3-92a2-8de479b035a5" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="QQ分析.exe">QQ分析.exe </span> </p>
-                    </div> </li>
-                  <li id="thumb_disk_file_item_06df69e9-913e-47bd-a4e8-4cbc6704df51" data-file-id="06df69e9-913e-47bd-a4e8-4cbc6704df51" class="figure-list-item ui-draggable" style="width: 185px;">
-                    <!--当前态添加类名act-->
-                    <!-- [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail -->
-                    <div class="figure-list-item-pic is-thumbnail" style="height: 139px;">
-                      <i data-action="enter" data-quick-drag="" class="icon icon-l icon-zip-l">訊息</i>
-                      <i data-file-check="" class="icon icon-check-m"></i>
-                    </div>
-                    <div data-action="enter" class="figure-list-item-txt">
-                      <!-- [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  -->
-                      <p class="tit"> <i class="icon icon-s icon-zip-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="Visio2010.rar">Visio2010.rar </span> </p>
-                    </div> </li>
-                </ul>
-              </div>
-              <div id="_thumb_disk_files_empty" class="empty-box" style="display: none;">
-                <!-- 全部为空 -->
-                <div class="status-inner">
-                  <i class="icon icon-nofile"></i>
-                  <h2 class="title">暂无文件</h2>
-                  <p class="txt">请点击右上角的“添加”按钮添加</p>
-                </div>
-              </div>
-            </div>
-            <div id="_task_body" class="mod-list-group task-ctrl-list mod-list-group-with-loc" style="background: rgb(255, 255, 255); display: none; position: absolute;">
-              <div class="group-item j-process-group" style="display: none;">
-                <div class="list-group-hd">
-                  <p class="tit"> 进行中 (剩余<span class="j-process-count"></span>) <span class="tips j-top-tips"> <span class="tips with-border loc-abs with-logo j-speedup-vip-span">会员专享传输最高提速500%<a class="txt-link" href="javascript: void(0);" data-upload="speedup_vip">开通会员</a></span> <a href="javascript: void(0);" class="tips with-border loc-abs j-capacity-purchase-a" data-upload="capacity_buy" style="display: none;" target="_blank"><i class="icon icon-assert"></i>容量不足，超大容量立即购买<i class="icon icon-link-to">跳转</i></a> <span class="tips with-border loc-abs with-logo j-capacity-vip-span" style="display: none;">容量不足，会员专享3T容量<a class="txt-link" href="javascript: void(0);" data-upload="capacity_vip">开通会员</a><i class="icon icon-tips-close j-tips-close">关闭</i></span> </span> </p>
-                  <div class="btn-group">
-                    <div class="btn-vip-wrapper j-upbox-speedup" style="">
-                      <button class="btn btn-m btn-vip" data-upload="speedup_try" style="display: none;">体验加速</button>
-                      <!-- [ATTENTION!!] 加速体验 s -->
-                      <div class="accelerate-wrapper try-accelerate j-novip-inner" style="display:none;">
-                        <!-- 60s 倒数 -->
-                        <i class="icon icon-count-down j-speedup-try-num">30</i> 加速中
-                        <b class="effect-wrapper"></b>
-                      </div>
-                      <!-- [ATTENTION!!] 加速体验 e -->
-                      <!-- [ATTENTION!!] 会员加速 s -->
-                      <div class="accelerate-wrapper vip-accelerate j-vip-inner" style="display:none;">
-                        <i class="icon icon-vip-accelerate" aria-hidden="true"></i> 会员加速中
-                        <b class="effect-wrapper"></b>
-                      </div>
-                      <!-- [ATTENTION!!] 会员加速 e -->
-                    </div>
-                    <button class="btn btn-m" data-upload="clear_process">取消</button>
-                  </div>
-                </div>
-                <div class="list-group-bd">
-                  <div id="task_safebox_view_process" style="display: none" class="list-group-item">
-                    <div class="processing j-upload-mask" style="width: 0;"></div>
-                    <div class="item-tit">
-                      <div class="label">
-                        <i class="icon icon-upload-mini"></i>
-                      </div>
-                      <div class="thumb">
-                        <i class="icon icon-m icon-safebox-file-m"></i>
-                      </div>
-                      <div class="info">
-                        <span class="tit ellipsis j-title"></span>
-                        <span class="sub-info"> <span class="item-info-list item-info-status fail j-upload-error" style="display: none;"> <span class="j-upload-error-text">上传失败</span> <a href="javascript: void(0);" class="link">反馈</a> </span> <span class="item-info-list item-info-size j-upload-data-size"></span> <span class="item-info-list item-info-status j-upload-state-text" style="display: none;">等待上传</span> <span class="item-info-list item-info-duration j-upload-remain-time" style="display: none;"></span> </span>
-                      </div>
-                    </div>
-                    <div class="item-info">
-                      <!-- [ATTENTION!!] 会员加速速度显示 -->
-                      <span class="item-info-list item-info-speed j-upload-speed" style="display: none;"> <i class="icon icon-speed j-upload-speed-up" style="display: none;"></i> <span class="j-upload-speed-text"></span> </span>
-                      <span class="item-info-list item-info-loc j-upload-path" style="display: none;"> <a href="javascript: void(0);" class="txt txt-link" title=""></a> </span>
-                      <span class="item-info-list"> <span class="mod-act-list j-act-list">
-               <!-- [ATTENTION!!] .pause 切换，继续上传 || 暂停上传 --> <a href="javascript: void(0);" class="act-list j-upload-oper j-upload-cancel" title="取消上传" data-upload="click_event" data-action="click_cancel"><i class="icon icon-upload-cancel"></i></a> </span> </span>
-                    </div>
-                  </div>
-                  <ul class="list-group j-process-list">
-                  </ul>
-                </div>
-              </div>
-              <div class="group-item j-complete-group" style="display: none;">
-                <div class="list-group-hd">
-                  <p class="tit">已完成 (<span class="j-complete-count"></span>)</p>
-                  <div class="btn-group">
-                    <button class="btn btn-m" data-upload="clear_complete">清空记录</button>
-                  </div>
-                </div>
-                <div class="list-group-bd">
-                  <div id="task_safebox_view_complete" style="display: none" class="list-group-item">
-                    <div class="processing j-upload-mask" style="width: 0;"></div>
-                    <div class="item-tit">
-                      <div class="label">
-                        <i class="icon icon-upload-mini"></i>
-                      </div>
-                      <div class="thumb">
-                        <i class="icon icon-m icon-safebox-file-m"></i>
-                      </div>
-                      <div class="info">
-                        <span class="tit ellipsis j-title">加密文件</span>
-                        <span class="sub-info"> <span class="item-info-list item-info-status fail j-upload-error" style="display: none;"> <span class="j-upload-error-text">上传失败</span> <a href="javascript: void(0);" class="link">反馈</a> </span> <span class="item-info-list item-info-size j-upload-data-size"></span> <span class="item-info-list item-info-status j-upload-state-text" style="display: none;">等待上传</span> <span class="item-info-list item-info-duration j-upload-remain-time" style="display: none;"></span> </span>
-                      </div>
-                    </div>
-                    <div class="item-info">
-                      <!-- [ATTENTION!!] 会员加速速度显示 -->
-                      <span class="item-info-list item-info-speed j-upload-speed" style="display: none;"> <i class="icon icon-speed j-upload-speed-up" style="display: none;"></i> <span class="j-upload-speed-text"></span> </span>
-                      <span class="item-info-list item-info-loc j-upload-path" style="display: none;"> <a href="javascript: void(0);" class="txt txt-link" title=""></a> </span>
-                      <span class="item-info-list"> <span class="mod-act-list j-act-list">
-               <!-- [ATTENTION!!] .pause 切换，继续上传 || 暂停上传 --> </span> </span>
-                    </div>
-                  </div>
-                  <ul class="list-group j-complete-list">
-                  </ul>
-                </div>
-              </div>
-              <!--空内容展示-->
-              <div class="empty-box j-upload-empty">
-                <!-- 任务为空 -->
-                <div class="status-inner" id="js-nofile" style="">
-                  <i class="icon icon-nofile"></i>
-                  <h2 class="title">没有任务</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!--<div class="layout-main">-->
+        <!--<div id="_main_hd" class="layout-main-hd">-->
+          <!--<div id="_main_bar2" class="mod-act-panel" style="opacity: 1;">-->
+            <!--<div id="_disk_file_path" class="act-panel-inner cleafix" style="">-->
+              <!--<div class="mod-check">-->
+                <!--<i id="_disk_all_checker" data-file-check="" class="icon icon-checkbox icon-check-s"></i>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; 面包屑导航 s &ndash;&gt;-->
+              <!--&lt;!&ndash; 面包屑导航 &ndash;&gt;-->
+              <!--<div class="mod-breadcrumb">-->
+                <!--<ul data-inner="" class="breadcrumb clearfix">-->
+                  <!--<li data-cur="" tabindex="0" hidefocus="on" class="item cur"> <a href="javascript:void(0)">微云</a></li>-->
+                <!--</ul>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; 面包屑导航 e &ndash;&gt;-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div id="_main_content" class="layout-main-bd" style="height: 791px; opacity: 1;">-->
+          <!--<div id="_main_box" class="inner" style="height: 100%">-->
+            <!--<div id="_disk_body" class="mod-list-group">-->
+              <!--<div class="list-group-bd">-->
+                <!--&lt;!&ndash; 空目录时的提示 &ndash;&gt;-->
+                <!--<div id="_disk_files_empty" class="empty-box" style="display: none;">-->
+                  <!--<div class="status-inner">-->
+                    <!--<i class="icon icon-nofile"></i>-->
+                    <!--<h2 class="title">暂无文件</h2>-->
+                    <!--<p class="txt">请点击右上角的“添加”按钮添加</p>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<ul id="list_disk_files" class="list-group">-->
+                <!--</ul>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div id="_thumb_disk_body" data-label-for-aria="文件缩略图内容区域">-->
+              <!--<div class="mod-item-list">-->
+                <!--<ul id="thumb_folders_disk_files" class="item-list clearfix">-->
+                  <!--<li id="thumb_disk_file_item_d89ea6556f4a363063fb89a031343629" data-file-id="d89ea6556f4a363063fb89a031343629" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="QQ">QQ</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea65525d6fee520d9a6387ff051b6" data-file-id="d89ea65525d6fee520d9a6387ff051b6" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="图片资料">图片资料</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655d06ccd6fd712da38008dad44" data-file-id="d89ea655d06ccd6fd712da38008dad44" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="重要资源">重要资源</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea6558708347efa7f4096dd3b5254" data-file-id="d89ea6558708347efa7f4096dd3b5254" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="实用软件">实用软件</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea6552f272b9805768a72283c4ab5" data-file-id="d89ea6552f272b9805768a72283c4ab5" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="大学记录">大学记录</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea6555531d9a2aa23e9519a68ac2a" data-file-id="d89ea6555531d9a2aa23e9519a68ac2a" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="杂物">杂物</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea6556ade335e95e5198dcb41ab56" data-file-id="d89ea6556ade335e95e5198dcb41ab56" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="软件成品">软件成品</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655f8d93947101d5bbdfa6d7a5c" data-file-id="d89ea655f8d93947101d5bbdfa6d7a5c" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="编程资料">编程资料</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655e2f17bd90ad5181ffc901597" data-file-id="d89ea655e2f17bd90ad5181ffc901597" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="课程资料">课程资料</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655fcde35a81fcfb6179ac77a65" data-file-id="d89ea655fcde35a81fcfb6179ac77a65" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="其它">其它</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea6559d8a9eed12ffc0eda20662df" data-file-id="d89ea6559d8a9eed12ffc0eda20662df" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="文本资料">文本资料</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655fdf4cb0f5e1ae8d58929ef0f" data-file-id="d89ea655fdf4cb0f5e1ae8d58929ef0f" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="群共享文件">群共享文件</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655848bf66232b9a92257787af8" data-file-id="d89ea655848bf66232b9a92257787af8" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="声音资料">声音资料</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655307d425b77012fff91d403dd" data-file-id="d89ea655307d425b77012fff91d403dd" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="视频资料">视频资料</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                  <!--<li id="thumb_disk_file_item_d89ea655c381004ac158516701f0027d" data-file-id="d89ea655c381004ac158516701f0027d" class="item ui-draggable ui-droppable" style="width: 185px;">-->
+                    <!--<div data-action="enter" class="inner">-->
+                      <!--<i class="icon icon-m icon-file-m"></i>-->
+                      <!--<span class="txt" data-name="file_name" title="重要信息">重要信息</span>-->
+                    <!--</div> <i data-file-check="" class="icon icon-check-m"></i> </li>-->
+                <!--</ul>-->
+              <!--</div>-->
+              <!--<div class="mod-figure-list">-->
+                <!--<ul id="thumb_disk_files" class="figure-list clearfix">-->
+                  <!--<li id="thumb_disk_file_item_fa6b7d61-7dd1-478b-abdb-3ffd74539e2e" data-file-id="fa6b7d61-7dd1-478b-abdb-3ffd74539e2e" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-zip-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-zip-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="14059913.7z">14059913.7z </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_9cbd327e-891e-4bb0-99b7-fc0c2dded3af" data-file-id="9cbd327e-891e-4bb0-99b7-fc0c2dded3af" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="webdata.exe">webdata.exe </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_4c4a0ee9-88d7-417e-b8f0-5a24fea07e50" data-file-id="4c4a0ee9-88d7-417e-b8f0-5a24fea07e50" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="客户端测试程序.exe">客户端测试程序.exe </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_ec2bacf2-8e14-4160-b187-b3825c7ed359" data-file-id="ec2bacf2-8e14-4160-b187-b3825c7ed359" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-txt-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-txt-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="collector.txt">collector.txt </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_3c136728-4c4b-44a1-acde-e2fdfb6b573d" data-file-id="3c136728-4c4b-44a1-acde-e2fdfb6b573d" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="MySql.Data.dll">MySql.Data.dll </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_3f19e9c8-b59f-43cd-aaa4-459db0f3b4c1" data-file-id="3f19e9c8-b59f-43cd-aaa4-459db0f3b4c1" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="stmp_test.exe">stmp_test.exe </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_cb05e995-1eb6-4043-ada6-441f9a507218" data-file-id="cb05e995-1eb6-4043-ada6-441f9a507218" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="QrExtract.exe">QrExtract.exe </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_832914d9-f1ee-4d85-a61d-bab448b58130" data-file-id="832914d9-f1ee-4d85-a61d-bab448b58130" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-code-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-code-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="config.ini">config.ini </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_ac6e1871-9a11-4a29-83c3-bb37ea1cb258" data-file-id="ac6e1871-9a11-4a29-83c3-bb37ea1cb258" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-doc-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-doc-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="h3c速记.doc">h3c速记.doc </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_8922bc91-c1a6-4db3-92a2-8de479b035a5" data-file-id="8922bc91-c1a6-4db3-92a2-8de479b035a5" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-settings-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-settings-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="QQ分析.exe">QQ分析.exe </span> </p>-->
+                    <!--</div> </li>-->
+                  <!--<li id="thumb_disk_file_item_06df69e9-913e-47bd-a4e8-4cbc6704df51" data-file-id="06df69e9-913e-47bd-a4e8-4cbc6704df51" class="figure-list-item ui-draggable" style="width: 185px;">-->
+                    <!--&lt;!&ndash;当前态添加类名act&ndash;&gt;-->
+                    <!--&lt;!&ndash; [ATTENTION!!] 如果有文件类型，添加 .is-thumbnail &ndash;&gt;-->
+                    <!--<div class="figure-list-item-pic is-thumbnail" style="height: 139px;">-->
+                      <!--<i data-action="enter" data-quick-drag="" class="icon icon-l icon-zip-l">訊息</i>-->
+                      <!--<i data-file-check="" class="icon icon-check-m"></i>-->
+                    <!--</div>-->
+                    <!--<div data-action="enter" class="figure-list-item-txt">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 縮略小圖，圖標 class 變化的是 .icon-xxx-s  &ndash;&gt;-->
+                      <!--<p class="tit"> <i class="icon icon-s icon-zip-s"></i> <span class="txt" data-quick-drag="" data-name="file_name" title="Visio2010.rar">Visio2010.rar </span> </p>-->
+                    <!--</div> </li>-->
+                <!--</ul>-->
+              <!--</div>-->
+              <!--<div id="_thumb_disk_files_empty" class="empty-box" style="display: none;">-->
+                <!--&lt;!&ndash; 全部为空 &ndash;&gt;-->
+                <!--<div class="status-inner">-->
+                  <!--<i class="icon icon-nofile"></i>-->
+                  <!--<h2 class="title">暂无文件</h2>-->
+                  <!--<p class="txt">请点击右上角的“添加”按钮添加</p>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div id="_task_body" class="mod-list-group task-ctrl-list mod-list-group-with-loc" style="background: rgb(255, 255, 255); display: none; position: absolute;">-->
+              <!--<div class="group-item j-process-group" style="display: none;">-->
+                <!--<div class="list-group-hd">-->
+                  <!--<p class="tit"> 进行中 (剩余<span class="j-process-count"></span>) <span class="tips j-top-tips"> <span class="tips with-border loc-abs with-logo j-speedup-vip-span">会员专享传输最高提速500%<a class="txt-link" href="javascript: void(0);" data-upload="speedup_vip">开通会员</a></span> <a href="javascript: void(0);" class="tips with-border loc-abs j-capacity-purchase-a" data-upload="capacity_buy" style="display: none;" target="_blank"><i class="icon icon-assert"></i>容量不足，超大容量立即购买<i class="icon icon-link-to">跳转</i></a> <span class="tips with-border loc-abs with-logo j-capacity-vip-span" style="display: none;">容量不足，会员专享3T容量<a class="txt-link" href="javascript: void(0);" data-upload="capacity_vip">开通会员</a><i class="icon icon-tips-close j-tips-close">关闭</i></span> </span> </p>-->
+                  <!--<div class="btn-group">-->
+                    <!--<div class="btn-vip-wrapper j-upbox-speedup" style="">-->
+                      <!--<button class="btn btn-m btn-vip" data-upload="speedup_try" style="display: none;">体验加速</button>-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 加速体验 s &ndash;&gt;-->
+                      <!--<div class="accelerate-wrapper try-accelerate j-novip-inner" style="display:none;">-->
+                        <!--&lt;!&ndash; 60s 倒数 &ndash;&gt;-->
+                        <!--<i class="icon icon-count-down j-speedup-try-num">30</i> 加速中-->
+                        <!--<b class="effect-wrapper"></b>-->
+                      <!--</div>-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 加速体验 e &ndash;&gt;-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 会员加速 s &ndash;&gt;-->
+                      <!--<div class="accelerate-wrapper vip-accelerate j-vip-inner" style="display:none;">-->
+                        <!--<i class="icon icon-vip-accelerate" aria-hidden="true"></i> 会员加速中-->
+                        <!--<b class="effect-wrapper"></b>-->
+                      <!--</div>-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 会员加速 e &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-m" data-upload="clear_process">取消</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="list-group-bd">-->
+                  <!--<div id="task_safebox_view_process" style="display: none" class="list-group-item">-->
+                    <!--<div class="processing j-upload-mask" style="width: 0;"></div>-->
+                    <!--<div class="item-tit">-->
+                      <!--<div class="label">-->
+                        <!--<i class="icon icon-upload-mini"></i>-->
+                      <!--</div>-->
+                      <!--<div class="thumb">-->
+                        <!--<i class="icon icon-m icon-safebox-file-m"></i>-->
+                      <!--</div>-->
+                      <!--<div class="info">-->
+                        <!--<span class="tit ellipsis j-title"></span>-->
+                        <!--<span class="sub-info"> <span class="item-info-list item-info-status fail j-upload-error" style="display: none;"> <span class="j-upload-error-text">上传失败</span> <a href="javascript: void(0);" class="link">反馈</a> </span> <span class="item-info-list item-info-size j-upload-data-size"></span> <span class="item-info-list item-info-status j-upload-state-text" style="display: none;">等待上传</span> <span class="item-info-list item-info-duration j-upload-remain-time" style="display: none;"></span> </span>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 会员加速速度显示 &ndash;&gt;-->
+                      <!--<span class="item-info-list item-info-speed j-upload-speed" style="display: none;"> <i class="icon icon-speed j-upload-speed-up" style="display: none;"></i> <span class="j-upload-speed-text"></span> </span>-->
+                      <!--<span class="item-info-list item-info-loc j-upload-path" style="display: none;"> <a href="javascript: void(0);" class="txt txt-link" title=""></a> </span>-->
+                      <!--<span class="item-info-list"> <span class="mod-act-list j-act-list">-->
+               <!--&lt;!&ndash; [ATTENTION!!] .pause 切换，继续上传 || 暂停上传 &ndash;&gt; <a href="javascript: void(0);" class="act-list j-upload-oper j-upload-cancel" title="取消上传" data-upload="click_event" data-action="click_cancel"><i class="icon icon-upload-cancel"></i></a> </span> </span>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<ul class="list-group j-process-list">-->
+                  <!--</ul>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="group-item j-complete-group" style="display: none;">-->
+                <!--<div class="list-group-hd">-->
+                  <!--<p class="tit">已完成 (<span class="j-complete-count"></span>)</p>-->
+                  <!--<div class="btn-group">-->
+                    <!--<button class="btn btn-m" data-upload="clear_complete">清空记录</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <!--<div class="list-group-bd">-->
+                  <!--<div id="task_safebox_view_complete" style="display: none" class="list-group-item">-->
+                    <!--<div class="processing j-upload-mask" style="width: 0;"></div>-->
+                    <!--<div class="item-tit">-->
+                      <!--<div class="label">-->
+                        <!--<i class="icon icon-upload-mini"></i>-->
+                      <!--</div>-->
+                      <!--<div class="thumb">-->
+                        <!--<i class="icon icon-m icon-safebox-file-m"></i>-->
+                      <!--</div>-->
+                      <!--<div class="info">-->
+                        <!--<span class="tit ellipsis j-title">加密文件</span>-->
+                        <!--<span class="sub-info"> <span class="item-info-list item-info-status fail j-upload-error" style="display: none;"> <span class="j-upload-error-text">上传失败</span> <a href="javascript: void(0);" class="link">反馈</a> </span> <span class="item-info-list item-info-size j-upload-data-size"></span> <span class="item-info-list item-info-status j-upload-state-text" style="display: none;">等待上传</span> <span class="item-info-list item-info-duration j-upload-remain-time" style="display: none;"></span> </span>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item-info">-->
+                      <!--&lt;!&ndash; [ATTENTION!!] 会员加速速度显示 &ndash;&gt;-->
+                      <!--<span class="item-info-list item-info-speed j-upload-speed" style="display: none;"> <i class="icon icon-speed j-upload-speed-up" style="display: none;"></i> <span class="j-upload-speed-text"></span> </span>-->
+                      <!--<span class="item-info-list item-info-loc j-upload-path" style="display: none;"> <a href="javascript: void(0);" class="txt txt-link" title=""></a> </span>-->
+                      <!--<span class="item-info-list"> <span class="mod-act-list j-act-list">-->
+               <!--&lt;!&ndash; [ATTENTION!!] .pause 切换，继续上传 || 暂停上传 &ndash;&gt; </span> </span>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<ul class="list-group j-complete-list">-->
+                  <!--</ul>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--&lt;!&ndash;空内容展示&ndash;&gt;-->
+              <!--<div class="empty-box j-upload-empty">-->
+                <!--&lt;!&ndash; 任务为空 &ndash;&gt;-->
+                <!--<div class="status-inner" id="js-nofile" style="">-->
+                  <!--<i class="icon icon-nofile"></i>-->
+                  <!--<h2 class="title">没有任务</h2>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
       <!-- 主要内容 e -->
     </div>
   </div>
 </div>
-<div data-id="url_parser" style="display:none;"></div>
-<iframe data-id="cdr_proxy" src="https://user.weiyun.com/cdr_proxy.html" style="display:none;"></iframe>
-<iframe data-id="cdr_proxy" src="https://user.weiyun.com/cdr_proxy.html" style="display:none;"></iframe>
-<iframe data-id="cdr_proxy" src="https://user.weiyun.com/cdr_proxy.html" style="display:none;"></iframe>
-<iframe data-id="cdr_proxy" src="https://user.weiyun.com/cdr_proxy.html" style="display:none;"></iframe>
-<div style="position: fixed; display: none;"></div>
-<div style="position: absolute; top: -1000px; left: -1000px; display: none; width: auto;"></div>
-<div class="ui-dnd" style="position: fixed; z-index: 9999; background-color: rgb(249, 245, 245); opacity: 0.2; border: 5px dashed; top: 0px; left: 0px; display: none;">
-  <div style="top:50%;left:50%;margin-left:-50px;margin-top:-50px;font-size:24px;opacity:1;position:absolute;">
-    文件拖放到此处
-  </div>
 </div>
-<div data-id="downloader" style="display:none;">
-  <iframe name="_download_iframe" src="https://www.weiyun.com/set_domain.html"></iframe>
-</div>
-<div class="tip-clip" style="display:none;">
-  <i class="ico-war"></i>
-  <span></span>
-</div>
-</body>
-</html>
