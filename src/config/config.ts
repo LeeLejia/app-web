@@ -4,23 +4,27 @@ export const config = {
   port: 80,
   proName: 'my-site',
   urls: {
-    forgetPwd: '',
-    register: '',
+    forgetPwd: '/forget',
+    register: '/register',
     login: '/login',
     logout: '/logout',
+    develper: {
+      root: '/developer',
+      home: '/developer/home',
+    },
   },
   roles: {
     developer: {
-      name: '',
-      home: '',
+      name: 'developer',
+      home: '/developer/home',
     },
     admin: {
-      name: '',
-      home: '',
+      name: 'admin',
+      home: 'http://www.baidu.com',
     },
     common: {
-      name: '',
-      home: '',
+      name: 'common',
+      home: 'http://www.baidu.com',
     }
   },
   codes: {

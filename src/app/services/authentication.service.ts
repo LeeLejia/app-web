@@ -39,7 +39,7 @@ export class AuthenticationService {
                 const ret = response.json();
                 if (ret.code === 200) {
                   localStorage.setItem('token', ret.data.token);
-                  localStorage.setItem('session', ret.data.session);
+                  localStorage.setItem('session', ret.data.sessionId);
                   localStorage.setItem('user', JSON.stringify(ret.data.user));
                   this.user = ret.data.user || {};
                   // todo 返回跳转前页面

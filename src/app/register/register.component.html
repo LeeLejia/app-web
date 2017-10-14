@@ -1,0 +1,154 @@
+<div class="body">
+  <div class="regist-wrapper" id="registWrapper">
+    <div class="regist-header ">
+      <h1>{{siteName}}</h1>
+    </div>
+    <!--邮箱内容 start-->
+    <div class="regist-content " data-id="registerForm">
+      <div class="ct-inner">
+        <!--tab start-->
+        <div class="tab">
+          <ul class="tab-list" id="registerTypeTab" style="display: none">
+            <li class="tab-item selected" data-registertype="mail">
+              <a href="javascript:;" class="tab"><span class="icon mail"></span><span class="title">邮箱注册</span></a>
+            </li>
+            <li class="tab-item " data-registertype="mobile">
+              <a href="javascript:;" class="tab"><span class="icon mobile"></span><span class="title">手机注册</span></a>
+            </li>
+          </ul>
+          <div class="regist-form" data-formtype="mail" style="display:">
+            <ul class="form-list">
+
+              <li>
+                <div class="form-input">
+                  <div class="form-unit tip-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">邮箱地址</label>
+                    <input type="text" class="qc-log-input-text lg" placeholder="邮箱地址">
+                    <ul class="tip-list" style="display: none" data-id="mailSuggest"></ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="form-input">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">密码</label>
+                    <input type="password" class="qc-log-input-text lg" placeholder="密码" data-id="passwordInput">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="form-input">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">确认密码</label>
+                    <input type="password" class="qc-log-input-text lg" placeholder="确认密码" data-id="confirmPasswordInput">
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="sp-line">
+              <span class="line"></span>
+              <span class="title">联系手机</span>
+            </div>
+            <ul class="form-list">
+              <li>
+                <div class="form-unit tip-unit">
+                  <label class="input-tips J-placeholder" style="display: none;">手机号码</label>
+                  <input type="text" class="qc-log-input-text lg" placeholder="手机号码" data-id="mailInput">
+                  <ul class="tip-list" style="display: none"></ul>
+                </div>
+              </li>
+              <li>
+                <div class="form-input fm-verify">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">验证码</label>
+                    <input type="text" class="qc-log-input-text" placeholder="验证码" data-id="smsCodeInput">
+                    <button type="button" class="qc-log-btn xl" data-id="smsCodeBtn" hotrep="regist.fmverify.btn">获取验证码</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="regist-form" data-formtype="mobile" style="display:none">
+            <ul class="form-list">
+              <li>
+                <div class="form-input">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">手机号码</label>
+                    <input type="text" class="qc-log-input-text lg" placeholder="手机号码" data-id="phoneInput">
+                    <p class="form-input-help">仅限中国大陆手机号码，海外用户请用<a tabindex="-1" href="javascript:;" class="link" data-registertype="mail">邮箱注册</a></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="form-input">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">密码</label>
+                    <input type="password" class="qc-log-input-text lg" placeholder="密码" data-id="passwordInput">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="form-input">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">确认密码</label>
+                    <input type="password" class="qc-log-input-text lg" placeholder="确认密码" data-id="confirmPasswordInput">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="form-input fm-verify">
+                  <div class="form-unit">
+                    <label class="input-tips J-placeholder" style="display: none;">验证码</label>
+                    <input type="text" class="qc-log-input-text" placeholder="验证码" data-id="smsCodeInput">
+                    <button type="button" class="qc-log-btn xl" data-id="smsCodeBtn" hotrep="regist.fmverify.btn">获取验证码</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="op-btn">
+            <button type="button" class="qc-log-btn lg" id="commit" hotrep="regist.op.regist.btn">同意说明内容并提交</button>
+            <button type="button" class="qc-log-btn lg" id="commitLoading" style="display:none">
+              <div class="m-loading">
+                <div class="loading">
+                  <div class="one"></div>
+                  <div class="two"></div>
+                  <div class="three"></div>
+                </div>
+              </div>
+            </button>
+          </div>
+
+
+          <div class="sp-line">
+            <span class="line"></span>
+            <a hotrep="regist.opline.agreement" target="_blank" href="" class="title links">注册说明</a>
+          </div>
+
+
+        </div>
+        <!--tab end-->
+      </div>
+
+    </div>
+    <!--邮箱内容 end-->
+
+    <div class="regist">
+      <p class="tag-line">
+        已有账号？<a href="{{loginUrl}}" class="link" hotrep="regist.mailactiv.login">立即登录</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="lg-footer J-loginLanguage">
+    <!--copyright start-->
+    <div class="copyright">
+      <p class="tag-line">
+        Copyright © 2017 cst. <span>{{siteName}}&nbsp;-cjwddz</span>
+      </p>
+    </div>
+    <!--copyright end-->
+  </div>
+
+</div>

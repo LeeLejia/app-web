@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthenticationService } from './authentication.service';
 import {config} from '../../config/config';
 import utils from '../../utils/utils';
-import {MeditorService} from "./meditor.service";
-import {AlertMsg} from "../share/alert/alert.component";
+import {MeditorService} from './meditor.service';
+import {AlertMsg} from '../share/alert/alert.component';
 
 @Injectable()
 export class HttpService {
-  constructor(private http: Http, private authenticationService: AuthenticationService,
-              private router: Router, private meditor: MeditorService) { }
+  constructor(private http: Http, private router: Router, private meditor: MeditorService) { }
   get(url, params?: any) {
       const requrl = params ? url + `?${utils.parseParam(params)}` : url;
       return this.http.get(requrl).map(response => {
