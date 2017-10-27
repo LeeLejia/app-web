@@ -1,6 +1,5 @@
 /*! CSS Used from: https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/css/page-home.css */
 img{border:0;}
-.layout-aside{-moz-user-select:none;-ms-user-select:none;-ktml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
 div,li,ul{margin:0;padding:0;outline:0;}
 i{font-style:normal;font-weight:400;}
 ul{list-style:none;}
@@ -12,10 +11,6 @@ img{background-image:none!important;}
 ::-webkit-input-placeholder{color:#74787C;opacity:.6;}
 ::-moz-placeholder{color:#74787C;opacity:.6;}
 :-ms-input-placeholder{color:#74787C;opacity:.6;}
-.layout-aside{position:absolute;left:0;bottom:auto;top:66px;width:200px;background:#fff;}
-.layout-aside .mod-user{margin:10px auto 0;}
-.layout-aside .mod-menu{margin:8px 0 0;}
-.layout-aside .layout-aside-ft{position:absolute;left:0;right:0;bottom:0;}
 .btn{padding:0;}
 .icon{position:relative;}
 .btn,.icon{display:inline-block;}
@@ -29,19 +24,6 @@ img{background-image:none!important;}
 .mod-user .user-avatar-pic{position:relative;display:inline-block;height:58px;}
 .mod-user .user-avatar img{width:56px;height:56px;border:1px solid transparent;border-radius:100%;}
 .mod-user .user-avatar:before{display:none;}
-.icon-add-safebox,.icon-all,.icon-doc,.icon-music,.icon-pho,.icon-pic,.icon-ren,.icon-share,.icon-trash,.icon-video{width:24px;height:24px;}
-.icon-ren{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-ren.svg);}
-.icon-all{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-all.svg);}
-.cur .icon-all{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-all-act.svg);}
-.icon-doc{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-doc.svg);}
-.icon-pic{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-pic.svg);}
-.icon-video{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-video.svg);}
-.icon-note{width:24px;height:24px;background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-note.svg);}
-.icon-music{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-music.svg);}
-.icon-share{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-share.svg);}
-.icon-trash{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-trash.svg);}
-.icon-add-safebox{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-add-safebox.svg);}
-.icon-pho{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-pho.svg);}
 .mod-menu{overflow-y:auto;}
 .mod-menu .menu-item{position:relative;padding:10px 0;}
 .mod-menu .menu-item:after{position:absolute;content:"";width:120px;height:1px;bottom:0;background:#E8EAEB;left:50%;margin:0 0 0 -60px;}
@@ -66,3 +48,21 @@ a:hover{text-decoration:none;}
   font-size: medium;
   margin:5px;
 }
+
+.mod-user{margin:10px auto 0;}
+.mod-menu{margin:8px 0 0;}
+.layout-aside-ft{position:absolute;left:0;right:0;bottom:0;}
+.layout-main{
+  height: 100%;
+  min-height: 100%;
+}
+/*图标设置*/
+/*.icon-add-safebox,.icon-all,.icon-doc,.icon-music,.icon-pho,.icon-pic,.icon-ren,.icon-share,.icon-trash,.icon-video{width:24px;height:24px;}*/
+
+.icon-note{width:24px;height:24px;background-image:url(/assets/img/icon-note.png);}
+.icon-app{width:24px;height:24px;background-image:url(/assets/img/icon-app.png);}
+.icon-code{width:24px;height:24px;background-image:url(/assets/img/icon-code.png);}
+.icon-slog{width:24px;height:24px;background-image:url(/assets/img/icon-slog.png);}
+.icon-msg{width:24px;height:24px;background-image:url(/assets/img/icon-msg.png);}
+.icon-issue{width:24px;height:24px;background-image:url(/assets/img/icon-issue.png);}
+.icon-qr{width:24px;height:24px;background-image:url(/assets/img/icon-qr.png);}

@@ -16,6 +16,11 @@ import {ToastComponent, ToastMsg} from "./share/toast/toast";
 
 // 路由配置
 export const routers = [
+  {
+    path: '',
+    redirectTo: config.api.login.substr(1),
+    pathMatch: 'full'
+  },
   {path: config.api.login.substr(1), component: LoginComponent},
   {path: config.api.register.substr(1), component: RegisterComponent},
   {path: config.api.develper.root.substr(1), loadChildren: './developer/developer.Module#DeveloperModule'}

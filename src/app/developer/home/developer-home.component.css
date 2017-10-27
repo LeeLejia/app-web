@@ -1,11 +1,35 @@
-
+/*最外框*/
+.layout-body{
+  position: relative;
+  height: 100%;
+  /*display: inline;*/
+  /*padding: 0px 0px 0px 200px;*/
+}
+/*顶部栏*/
 .header{
   position: absolute;
   width:100%;
   top:0;
   left: 0;
-  right:0;
 }
-.layout-body{
-  float: left;
+/*侧边栏*/
+.layout-body .layout-aside{
+  position:relative;
+  width:200px;
+  background:#fff;
+  margin-top: 66px;
+  /*left:0;*/
+  float:left;
+  height: 100%;
+  border-right:1px solid #E6E7EC;}
+/*内容区*/
+.layout-body .container {
+  max-width: 90%;
+  width:90%;
+  margin-top: 66px;
+  margin-left: 200px;
+  position: absolute;
+  text-align: center;
+  clear: both;
 }
+
