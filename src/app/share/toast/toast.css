@@ -12,10 +12,14 @@ i.icon{font-size:1em;}
 .cg.flash:hover>.close.icon:first-child{opacity:1;top:0;}
 .cg.center.flash{text-align:center;}
 .cg.active.flash{top:0;opacity:1;}
-.cg.flash>.outer>.success.message{background-color:#DEFCD5;color:#52A954;}
 @-webkit-keyframes flash{0%,100%,50%{opacity:1;}25%,75%{opacity:0;}}
 @-moz-keyframes flash{0%,100%,50%{opacity:1;}25%,75%{opacity:0;}}
 @keyframes flash{0%,100%,50%{opacity:1;}25%,75%{opacity:0;}}
 @-webkit-keyframes flash{0%,100%,50%{opacity:1;}25%,75%{opacity:0;}}
 @keyframes flash{0%,100%,50%{opacity:1;}25%,75%{opacity:0;}}
 @font-face{font-family:Icons;src:url(https://coding.net/static/5ae23ad29b67289a1375d2043e289c52.eot);src:url(https://coding.net/static/5ae23ad29b67289a1375d2043e289c52.eot#iefix) format('embedded-opentype'),url(https://coding.net/static/f99a231ed57ee113b50b1c3e9f9fcdc3.svg#icons) format('svg'),url(https://coding.net/static/b683029bafe0305ac2234038a03e1541.woff) format('woff'),url(https://coding.net/static/8cca2f02b0af2da365ff4d1755f29146.ttf) format('truetype');font-style:normal;font-weight:400;font-variant:normal;text-decoration:inherit;text-transform:none;}
+
+.cg.flash>.outer>.success.message{background-color: rgba(53, 203, 252, 0.58);color: #061241;}
+.cg.flash>.outer>.warn.message{background-color: #fcf94d;color: #0e13cb;}
+.cg.flash>.outer>.error.message{background-color: #fc8e3b;color: #e52b1c;}
+.cg.flash>.outer>.info.message{background-color:#DEFCD5;color:#52A954;}

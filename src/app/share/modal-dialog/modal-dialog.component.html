@@ -1,6 +1,6 @@
 <div id="ngdialog1" class="ngdialog ngdialog-theme-default ng-scope" [hidden]="hidden">
   <div class="ngdialog-overlay" (click)="click_outside();"></div>
-  <div class="ngdialog-content" role="document">
+  <div class="outside ngdialog-content" role="document">
     <div class="page-dialog-wrap">
       <div class="page-dialog-content">
         <!--内容区-->
@@ -8,6 +8,6 @@
         <!--内容区-->
       </div>
     </div>
-    <div *ngIf="closeEvn" class="ngdialog-close" (click)="close();"></div>
+    <!--<div *ngIf="closeEvn" class="ngdialog-close" (click)="close();"></div>-->
   </div>
 </div>

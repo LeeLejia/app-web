@@ -14,8 +14,8 @@ import {AuthenticationService} from "../services/authentication.service";
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  forgetPwd = config.urls.forgetPwd;
-  register = config.urls.register;
+  forgetPwd = config.api.forgetPwd;
+  register = config.api.register;
   account = '';
   password = '';
   constructor(private meditor: MeditorService, private auth: AuthenticationService) {

@@ -1,0 +1,112 @@
+<div id="_main_top" class="mod-nav clearfix">
+  <div class="logo">
+    <img src="/assets/img/fangtan.png" width="135px">
+    <!--<a href="javascript:void(0);" target="_blank" title="方塘" tabindex="-1">方塘</a>-->
+  </div>
+  <div id="_main_normal">
+
+    <!-- 传输面板 s -->
+    <div class="mod-act">
+            <span class="act-link" id="_main_header_manage" href="javascript: void(0);" data-action="manage" title="文件管理" style="cursor: pointer;">
+            <i class="icon icon-act j-manage-icon"></i> <span class="sync-num j-manage-num" style="display: none;"></span> </span>
+    </div>
+    <!-- 传输面板 e -->
+    <!--搜索 s -->
+    <div class="mod-search j-header-search">
+      <!--获得焦点状态添加类名focus -->
+      <i class="icon icon-search"></i>
+      <label>输入文件名</label>
+      <input class="mod-input" type="text" autocomplete="off" maxlength="40" aria-label="输入文件名并按下回车进行搜索" tabindex="0" />
+      <a class="close" href="javascript: void(0);" aria-label="关闭搜索界面" hidefocus="on"><i class="icon icon-close"></i></a>
+    </div>
+    <!--搜索 e -->
+    <!-- 视图模式 s -->
+    <div id="_main_bar0" class="mod-view">
+      <div class="view-item-list clearfix">
+        <div data-id="view_switch" class="view-item clearfix">
+          <a data-action="list" data-name="list" class="item-list " href="javascript: void(0);" title="列表视图"> <i class="icon icon-list"></i> </a>
+          <a data-action="thumb" data-name="thumb" class="item-list cur" href="javascript: void(0);" title="缩略图视图"> <i class="icon icon-thum"></i> </a>
+        </div>
+        <div data-id="rank_switch" class="view-item clearfix">
+          <a data-action="time" data-name="time" class="item-list cur" href="javascript: void(0);" title="按时间排序"> <i class="icon icon-ren"></i> </a>
+          <a data-action="letter" data-name="letter" class="item-list " href="javascript: void(0);" title="按字母排序"> <i class="icon icon-letter"></i> </a>
+        </div>
+      </div>
+    </div>
+    <!-- 视图模式 e -->
+    <!-- 用到的css：mod-nav.css -->
+    <!-- 添加 s -->
+    <!-- [ATTENTION!!] 切换 .on -->
+    <div data-action="upload" class="mod-upload">
+      <input id="_upload_html5_input" name="file" type="file" multiple="multiple" aria-label="上传文件，按空格选择文件。" style="display: none;" />
+      <label for="_upload_html5_input"><span class="btn btn-l btn-upload"><i class="icon icon-add"></i><span class="btn-txt">添加</span></span></label>
+      <!-- 添加内容 s -->
+      <div class="mod-bubble-dropdown with-border top-right upload-bubble-dropdown j-upload-drop">
+        <ul class="upload-dropdown clearfix">
+          <li class="upload-item" data-action="upload_files" style="">
+            <div class="inner">
+              <b class="icon icon-upload icon-upload-file"></b>
+              <p class="txt" tabindex="-1">上传文件</p>
+            </div> </li>
+          <li class="upload-item" data-action="upload_folder" style="">
+            <div class="inner">
+              <b class="icon icon-upload icon-upload-dir"></b>
+              <p class="txt" tabindex="-1">上传文件夹</p>
+            </div> </li>
+          <li class="upload-item" data-action="offline_download" style="">
+            <div class="inner">
+              <b class="icon icon-upload icon-offline-download"></b>
+              <p class="txt" tabindex="-1">离线下载</p>
+            </div> </li>
+          <li class="upload-item" data-action="create_folder" style="">
+            <div class="inner">
+              <b class="icon icon-upload icon-create-dir"></b>
+              <p class="txt" tabindex="-1">创建文件夹</p>
+            </div> </li>
+          <li class="upload-item" data-action="add_note" style="">
+            <div class="inner">
+              <b class="icon icon-upload icon-add-note"></b>
+              <p class="txt" tabindex="-1">添加笔记</p>
+            </div> </li>
+        </ul>
+        <b class="bubble-arrow-border"></b>
+        <b class="bubble-arrow"></b>
+      </div>
+      <!-- 添加内容 e -->
+    </div>
+    <!-- 添加 e-->
+  </div>
+  <!-- 工具栏 s-->
+  <div id="_main_edit" style="display: none;">
+    <div class="select-btn-wrap">
+      <a href="javascript: void(0);" class="select-btn" data-action="edit_cancel_all">取消选择</a>
+    </div>
+    <div class="edit-select j-edit-count">
+      <p>选择了<span class="j-edit-count-text"></span>项</p>
+    </div>
+    <!--导航栏编辑按钮 s -->
+    <div class="mod-edit-bar">
+      <ul class="edit-wrap clearfix" id="_main_bar1">
+        <li data-btn-id="edit" data-no-selection="" class="edit-item" tabindex="-1" style=""><i class="icon icon-edit"></i><span class="text">编辑</span></li>
+        <li data-btn-id="share_edit" data-no-selection="" class="edit-item" tabindex="-1" style=""><i class="icon icon-edit-invite"></i><span class="text">邀请好友编辑</span></li>
+        <li data-btn-id="share" data-no-selection="" class="edit-item" tabindex="-1"><i class="icon icon-share"></i><span class="text">分享</span></li>
+        <li data-btn-id="pack_down" data-no-selection="" class="edit-item" tabindex="-1"><i class="icon icon-download"></i><span class="text">下载</span></li>
+        <li data-btn-id="del" data-no-selection="" class="edit-item" tabindex="-1"><i class="icon icon-trash"></i><span class="text">删除</span></li>
+        <li class="edit-item has-more"> <i class="icon icon-menu-more"></i>
+          <div class="mod-bubble-dropdown with-border top-right edit-bubble-dropdown">
+            <ul class="list-dropdown">
+              <li data-btn-id="move" data-no-selection="" class="item" tabindex="-1"><button class="btn-link">移动到</button></li>
+              <li data-btn-id="rename" data-no-selection="" class="item" tabindex="-1"><button class="btn-link">重命名</button></li>
+              <li data-btn-id="add_safebox" data-no-selection="" class="item" tabindex="-1"><button class="btn-link">移入保险箱</button></li>
+            </ul>
+            <b class="bubble-arrow-border"></b>
+            <b class="bubble-arrow"></b>
+          </div> </li>
+        <!--<li data-btn-id="mkdir" data-no-selection class="edit-item" tabindex="-1"><i class="icon icon-trash"></i><span class="text">新建文件夹</span></li>-->
+        <!--<li data-btn-id="refresh" data-no-selection class="edit-item" tabindex="-1"><i class="icon icon-trash"></i><span class="text">删除</span></li>-->
+      </ul>
+    </div>
+    <!--导航栏编辑按钮 e -->
+  </div>
+  <!-- 工具栏 e-->
+</div>

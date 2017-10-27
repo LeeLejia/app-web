@@ -1,0 +1,59 @@
+<div id="_main_nav" class="layout-aside" data-no-selection="" style="height: 849px;border-right:1px solid #E6E7EC;">
+
+  <div class="layout-aside-hd">
+    <div class="mod-user mod-user-vip">
+      <!--用户头像-->
+      <div id="_main_face" class="user-avatar">
+        <a class="user-avatar-pic" href="javascript: void(0);" data-id="qzone_vip">
+          <img src="{{user?user.avatar:'/assets/img/avatar.png'}}" />
+          <i class="icon icon-vip j-vip-icon" title="VIP会员" style="display: none; background-image: url(//qzonestyle.gtimg.cn/qz-proj/wy-src/img/vip-v2/vip_0_off_M.png);"></i>
+        </a>
+      </div>
+      <!-- 用户信息 s -->
+      <div id="_main_face_menu" class="mod-bubble-dropdown acct-bubble-dropdown" style="display: block;text-align: center;">
+        <div class="acct-dropdown">
+          <div class="acct-info">
+            <div class="name-container clearfix">
+              <span id="_main_nick_name" class="name">{{user?.nick}}</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- 用户信息 e -->
+    </div>
+  </div>
+
+  <div id="_main_nav_aside_box" class="layout-aside-bd" style="height: 745px; overflow-y: hidden;">
+    <!-- 菜单 s -->
+    <div id="_main_nav_aside_wrap" class="mod-menu" style="width: 100%;">
+      <!-- 文件s -->
+      <div class="menu-item">
+        <div class="menu-item-bd">
+          <ul class="menu-list">
+            <li class="cur" data-mod="disk" data-op="NAV_DISK"> <a href="page-home.html"><i class="icon icon-all"></i><span class="menu-tit">全部</span></a> </li>
+            <li data-mod="doc" data-op="NAV_DOC"> <a href="javascript: void(0);"><i class="icon icon-doc"></i><span class="menu-tit">笔记</span></a> </li>
+            <li data-mod="album" data-op="NAV_ALBUM"> <a href="javascript: void(0);"><i class="icon icon-pic"></i><span class="menu-tit">应用</span></a> </li>
+            <li data-mod="video" data-op="NAV_VIDEO"> <a href="javascript: void(0);"><i class="icon icon-video"></i><span class="menu-tit">邀请码</span></a> </li>
+            <li data-mod="note" data-op="NAV_NOTE"> <a href="javascript: void(0);"><i class="icon icon-note"></i><span class="menu-tit">应用日志</span></a> </li>
+            <li data-mod="audio" data-op="NAV_AUDIO"> <a href="javascript: void(0);"><i class="icon icon-music"></i><span class="menu-tit">系统日志</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 文件e -->
+
+      <!-- 我的s -->
+      <div class="menu-item">
+        <div class="menu-item-bd">
+          <ul class="menu-list">
+            <li data-mod="safebox" data-op="NAV_SAFEBOX"> <a href="javascript: void(0);"><i class="icon icon-add-safebox"></i><span class="menu-tit">消息</span></a> </li>
+            <li data-mod="share" data-op="NAV_SHARE"> <a href="javascript: void(0);"><i class="icon icon-share"></i><span class="menu-tit">问题</span></a> </li>
+            <li data-mod="recycle" data-op="NAV_RECYCLE"> <a href="javascript: void(0);"><i class="icon icon-trash"></i><span class="menu-tit">收款码</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 我的e -->
+    </div>
+    <!-- 菜单 s -->
+  </div>
+</div>

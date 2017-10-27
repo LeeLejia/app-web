@@ -27,9 +27,9 @@ export class AuthenticationService {
      */
     login(params) {
         const headers = new Headers();
-        console.log(`${utils.getApiPrefix()}/${config.urls.login}`);
+        console.log(`${utils.getApiPrefix()}/${config.api.login}`);
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        return this.http.post(`${utils.getApiPrefix()}${config.urls.login}`, utils.parseParam({
+        return this.http.post(`${utils.getApiPrefix()}${config.api.login}`, utils.parseParam({
             ...params,
             osType: 'web'
         }), {
@@ -63,14 +63,14 @@ export class AuthenticationService {
     logout() {
         const user = this.getUser();
         if (user) {
-            const url = `${utils.getApiPrefix()}${config.urls.logout}`;
+            const url = `${utils.getApiPrefix()}${config.api.logout}`;
             return this.http.post(url, utils.parseParam({
               session: localStorage.getItem('session'),
               token: localStorage.getItem('token'),
               osType: 'web',
             })).subscribe(response => {});
         }
-      this.router.navigate([config.urls.login]);
+      this.router.navigate([config.api.login]);
       localStorage.removeItem('user');
       localStorage.removeItem('token');
       localStorage.removeItem('session');

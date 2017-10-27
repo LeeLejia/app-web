@@ -16,7 +16,7 @@ export class HttpService {
           if (ret.codes === config.codes.AuthenticationFail) {
             const msg: AlertMsg = {title: '身份验证失败', content: ret.data.msg || '请检查网络是否连接？'};
             this.meditor.push({id: 'alert', body: msg});
-            this.router.navigate([config.urls.login]);
+            this.router.navigate([config.api.login]);
           }
           return ret;
       });
@@ -32,7 +32,7 @@ export class HttpService {
       if (ret.code === config.codes.AuthenticationFail) {
         const msg: AlertMsg = {title: '身份验证失败', content: ret.msg || '请检查网络是否连接？'};
         this.meditor.push({id: 'alert', body: msg});
-        this.router.navigate([config.urls.login]);
+        this.router.navigate([config.api.login]);
       }
       return ret;
     });

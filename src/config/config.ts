@@ -1,9 +1,9 @@
 export const config = {
   protocol : 'http',
-  host: 'localhost',
+  host: '139.199.219.24',
   port: 80,
-  proName: 'my-site',
-  urls: {
+  proName: '方塘',
+  api: {
     forgetPwd: '/forget',
     register: '/register',
     login: '/login',
@@ -20,11 +20,11 @@ export const config = {
     },
     admin: {
       name: 'admin',
-      home: 'http://www.baidu.com',
+      home: '/developer/home',
     },
     common: {
       name: 'common',
-      home: 'http://www.baidu.com',
+      home: '/developer/home',
     }
   },
   codes: {

@@ -5,6 +5,7 @@ import {
 } from '@angular/core';
 import {MeditorService} from '../../services/meditor.service';
 import {Subscription} from 'rxjs/Subscription';
+import {forEach} from "@angular/router/src/utils/collection";
 
 @Component({
   selector: 'app-modal-dialog',
@@ -25,6 +26,7 @@ export class ModalDialogComponent implements OnDestroy {
       if (msg.id === 'modal-dialog') {
         const news = msg.body as ModalMsg;
         this.closeEvn = news.closeEvn || null;
+        this.outsideEvn = news.outsideEvn || null;
         // 关闭弹窗
         if (news.hidden) {
           this.hidden = true;
@@ -32,9 +34,11 @@ export class ModalDialogComponent implements OnDestroy {
         }
         if (news.view) {
           this.hidden = false;
-          this.createComponent(news.view);
+
+          this.createComponent(news.view,news.params);
         }
       }
+
     });
   }
 
@@ -48,23 +52,31 @@ export class ModalDialogComponent implements OnDestroy {
   }
 
   // 创建自定义组件
-  createComponent(componentType: Type<Component>) {
+  createComponent(componentType: Type<Component>, params?:{key:string,value:any}[]) {
     this.container.clear();
     const factory: ComponentFactory<Component> =
       this.resolver.resolveComponentFactory(componentType);
     this.componentRef = this.container.createComponent(factory);
+    if(params){
+      for(let param of params) {
+        // console.log(key, params[key]);
+        (this.componentRef.instance as any)[param.key] = param.value;
+      }
+    }
   }
 
   // 关闭窗口
   close() {
     if (this.closeEvn) {
       this.closeEvn();
+
     }
     this.hidden = true;
   }
   // 点击了非内容区
   click_outside() {
     if (this.outsideEvn) {
+      console.log("close");
       this.outsideEvn();
     }else {
       this.hidden = true;
@@ -73,7 +85,8 @@ export class ModalDialogComponent implements OnDestroy {
 }
 export interface ModalMsg {
   hidden?: boolean;
-  closeEvn?: () => {};
-  outsideEvn?: () => {};
-  view: Type<Component>;
+  closeEvn?: Function;
+  outsideEvn?: Function;
+  view?: Type<Component>;
+  params?:{key:string,value:any}[];
 }

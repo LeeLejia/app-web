@@ -27,7 +27,7 @@ input[type=text]{-webkit-appearance:none;}
 .qc-pt-login-content{position:relative;display:inline-block;text-align:center;}
 .qc-pt-login-content .link{color:#fff;}
 .qc-pt-login-content .link:hover{text-decoration:underline;}
-.lg-content{position:absolute;right:25px;top:120px;}
+
 .qc-pt-login-content .login-tab{display:inline-block;background:#fff;width:430px;border-radius:4px;}
 .login-tab-title{font-size:28px;font-weight:400;padding-top:25px;color:#333;}
 .login-box .login-form{padding-top:25px;}
@@ -89,6 +89,11 @@ input[type=text]{-webkit-appearance:none;}
   right: 0;
   left: 0;
   bottom: 0;
+  text-align: center;
   background: #fee;
   background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/login-regist/css/img/qcloud-login-bg.jpg?nowebp);
 }
+
+/*登录盒子位置*/
+.lg-content{position:absolute;margin: 0 auto; top:120px;
+  left:50px;}

@@ -1,0 +1,68 @@
+/*! CSS Used from: https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/css/page-home.css */
+img{border:0;}
+.layout-aside{-moz-user-select:none;-ms-user-select:none;-ktml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+div,li,ul{margin:0;padding:0;outline:0;}
+i{font-style:normal;font-weight:400;}
+ul{list-style:none;}
+.icon,.mod-menu .icon,.mod-menu .menu-tit{vertical-align:middle;}
+a{text-decoration:none;color:#020202;outline:0;}
+a:hover{text-decoration:underline;}
+a i,a span{#cursor:hand;}
+img{background-image:none!important;}
+::-webkit-input-placeholder{color:#74787C;opacity:.6;}
+::-moz-placeholder{color:#74787C;opacity:.6;}
+:-ms-input-placeholder{color:#74787C;opacity:.6;}
+.layout-aside{position:absolute;left:0;bottom:auto;top:66px;width:200px;background:#fff;}
+.layout-aside .mod-user{margin:10px auto 0;}
+.layout-aside .mod-menu{margin:8px 0 0;}
+.layout-aside .layout-aside-ft{position:absolute;left:0;right:0;bottom:0;}
+.btn{padding:0;}
+.icon{position:relative;}
+.btn,.icon{display:inline-block;}
+.icon{background-repeat:no-repeat;font-size:0;overflow:hidden;-webkit-text-size-adjust:none;}
+.btn{text-align:center;cursor:pointer;outline:0;border:none;background-color:transparent;}
+.btn:hover{text-decoration:none;}
+.btn-m{padding:0 16px;height:34px;line-height:34px;border:1px solid #D2D8DC;border-radius:2px;outline:0;background-color:transparent;}
+.btn-m:hover{background-color:#F5F8FA;}
+.mod-user{width:94px;position:relative;z-index:10;}
+.mod-user .user-avatar{padding-top:18px;text-align:center;}
+.mod-user .user-avatar-pic{position:relative;display:inline-block;height:58px;}
+.mod-user .user-avatar img{width:56px;height:56px;border:1px solid transparent;border-radius:100%;}
+.mod-user .user-avatar:before{display:none;}
+.icon-add-safebox,.icon-all,.icon-doc,.icon-music,.icon-pho,.icon-pic,.icon-ren,.icon-share,.icon-trash,.icon-video{width:24px;height:24px;}
+.icon-ren{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-ren.svg);}
+.icon-all{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-all.svg);}
+.cur .icon-all{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-all-act.svg);}
+.icon-doc{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-doc.svg);}
+.icon-pic{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-pic.svg);}
+.icon-video{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-video.svg);}
+.icon-note{width:24px;height:24px;background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-note.svg);}
+.icon-music{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-music.svg);}
+.icon-share{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-share.svg);}
+.icon-trash{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-trash.svg);}
+.icon-add-safebox{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-add-safebox.svg);}
+.icon-pho{background-image:url(https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/img/svg/icon-pho.svg);}
+.mod-menu{overflow-y:auto;}
+.mod-menu .menu-item{position:relative;padding:10px 0;}
+.mod-menu .menu-item:after{position:absolute;content:"";width:120px;height:1px;bottom:0;background:#E8EAEB;left:50%;margin:0 0 0 -60px;}
+.mod-menu .menu-item:last-child:after{display:none;}
+.mod-menu .menu-list li a{position:relative;height:38px;line-height:38px;display:block;padding:0 0 0 58px;color:#000;}
+.mod-menu .menu-list li a:hover{text-decoration:none;background:#F5F8FA;transition:ease all;transition-duration:.3s;}
+.mod-menu .menu-list li.cur a{text-decoration:none;background:0 0;color:#0097EB;}
+.mod-menu .menu-list li.cur a:before{position:absolute;content:"";left:0;width:4px;height:28px;top:50%;margin:-14px 0 0;background:#00A4FF;}
+.mod-menu .icon{margin:0 12px 0 0;top:-1px;}
+.mod-menu .add-in{margin-top:6px;margin-bottom:20px;}
+.mod-menu .add-in .btn-vip{display:block;width:78px;margin:0 auto;height:26px;line-height:26px;padding:0;font-size:14px;color:#00A4FF;border-color:#00A4FF;}
+.mod-menu .add-in .btn-vip:hover{background-color:rgba(59,147,255,.1);}
+.mod-pro{position:absolute;left:0;bottom:0;width:200px;height:130px;}
+.mod-pro .pro-hd{position:relative;}
+.mod-pro .pro-img{width:200px;height:130px;}
+/*! CSS Used from: https://qzonestyle.gtimg.cn/qz-proj/wy-pc-v2/static/css/page-home-delay.css */
+a:hover{text-decoration:none;}
+.layout-aside-hd{
+  margin-top: 50px;
+}
+.name{
+  font-size: medium;
+  margin:5px;
+}
