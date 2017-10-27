@@ -1,12 +1,10 @@
 
 import {
-  Component, ComponentDecorator, ComponentFactory, ComponentFactoryResolver, ComponentRef, ViewChild,
-  ViewContainerRef
+  Component
 } from '@angular/core';
 import {config} from '../../config/config';
 import {MeditorService} from '../services/meditor.service';
-import {TestComponent} from '../test/test.component';
-import {AuthenticationService} from "../services/authentication.service";
+import {AuthenticationService} from '../services/authentication.service';
 
 @Component({
   selector: 'app-login',

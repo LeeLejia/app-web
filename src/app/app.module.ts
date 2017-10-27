@@ -5,14 +5,13 @@ import {MeditorService} from './services/meditor.service';
 import {AlertComponent} from './share/alert/alert.component';
 import {ContainerComponent} from './app';
 import {ModalDialogComponent} from './share/modal-dialog/modal-dialog.component';
-import {TestComponent} from './test/test.component';
 import {FormsModule} from '@angular/forms';
 import {AuthenticationService} from './services/authentication.service';
 import {Http, HttpModule} from '@angular/http';
 import {Router, RouterModule} from '@angular/router';
 import {config} from '../config/config';
 import {RegisterComponent} from './register/register.component';
-import {ToastComponent, ToastMsg} from "./share/toast/toast";
+import {ToastComponent, ToastMsg} from './share/toast/toast';
 
 // 路由配置
 export const routers = [
@@ -33,12 +32,11 @@ export const routers = [
     ContainerComponent,
     ModalDialogComponent,
     ToastComponent,
-    TestComponent,
     RegisterComponent,
   ],
   // 声明需要模式框加载的组件
   entryComponents: [
-    TestComponent,
+
   ],
   imports: [
     HttpModule,

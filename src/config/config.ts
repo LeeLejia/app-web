@@ -1,6 +1,6 @@
 export const config = {
   protocol : 'http',
-  host: '139.199.219.24',
+  host: 'www.cjwddz.cn',
   port: 80,
   proName: '方塘',
   api: {

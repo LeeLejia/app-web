@@ -1,3 +1,6 @@
+.out-side{
+  min-width:850px;
+}
 /*最外框*/
 .layout-body{
   position: relative;
@@ -7,14 +10,15 @@
 }
 /*顶部栏*/
 .header{
-  position: absolute;
+  position: fixed;
   width:100%;
+  min-width:850px;
   top:0;
   left: 0;
 }
 /*侧边栏*/
 .layout-body .layout-aside{
-  position:relative;
+  position: fixed;
   width:200px;
   background:#fff;
   margin-top: 66px;
@@ -28,8 +32,10 @@
   width:90%;
   margin-top: 66px;
   margin-left: 200px;
-  position: absolute;
+  position: fixed;
   text-align: center;
   clear: both;
 }
-
+::-webkit-scrollbar-track{
+  width:0;
+}
