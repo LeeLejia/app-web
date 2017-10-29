@@ -10,7 +10,7 @@ import {CommonModule} from '@angular/common';
 const routers = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: DeveloperHomeComponent, children: [
-  {path: '', redirectTo: 'app-list', pathMatch: 'full'},
+  {path: '', redirectTo: 'app-list', pathMatch: 'full',},
   {path: 'app-list', component: AppListComponent},
   ]},
 ];

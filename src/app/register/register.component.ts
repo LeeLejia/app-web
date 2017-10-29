@@ -7,7 +7,7 @@ import {config} from '../../config/config';
   styleUrls: ['register.component.css'],
 })
 export class RegisterComponent {
-  loginUrl = config.api.login;
+  loginUrl = config.urls.login;
   siteName = config.proName;
   email = '';
   phone = '';

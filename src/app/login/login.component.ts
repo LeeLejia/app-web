@@ -12,8 +12,8 @@ import {AuthenticationService} from '../services/authentication.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  forgetPwd = config.api.forgetPwd;
-  register = config.api.register;
+  forgetPwd = config.urls.forgetPwd;
+  register = config.urls.register;
   account = '';
   password = '';
   constructor(private meditor: MeditorService, private auth: AuthenticationService) {
@@ -22,6 +22,8 @@ export class LoginComponent {
     this.auth.login({
       account: this.account,
       pwd: this.password,
-    }).subscribe(res => {});
+    }).subscribe(null, (res) => {
+      console.log(res);
+    });
   }
 }

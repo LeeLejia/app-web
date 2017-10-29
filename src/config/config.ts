@@ -4,14 +4,15 @@ export const config = {
   port: 80,
   proName: '方塘',
   api: {
-    forgetPwd: '/forget',
-    register: '/register',
+    forgetPwd: '/api/forget',
+    register: '/api/register',
+    login: '/api/login',
+    logout: '/api/logout',
+  },
+  urls: {
     login: '/login',
-    logout: '/logout',
-    develper: {
-      root: '/developer',
-      home: '/developer/home',
-    },
+    register: '/register',
+    forgetPwd: '/forget',
   },
   roles: {
     developer: {

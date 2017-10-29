@@ -91,9 +91,13 @@ input[type=text]{-webkit-appearance:none;}
   bottom: 0;
   text-align: center;
   background: #fee;
-  background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/gateway/login-regist/css/img/qcloud-login-bg.jpg?nowebp);
+  background-image: url(/asset/img/bg.jpg);
 }
 
 /*登录盒子位置*/
-.lg-content{position:absolute;margin: 0 auto; top:120px;
-  left:50px;}
+.lg-content{
+  position: fixed;
+  top: 20%;
+  right: 30%;
+  left: 30%;
+}

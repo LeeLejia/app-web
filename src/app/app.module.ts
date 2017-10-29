@@ -22,7 +22,7 @@ export const routers = [
   },
   {path: config.api.login.substr(1), component: LoginComponent},
   {path: config.api.register.substr(1), component: RegisterComponent},
-  {path: config.api.develper.root.substr(1), loadChildren: './developer/developer.Module#DeveloperModule'}
+  {path: config.roles.developer.home.substr(1), loadChildren: './developer/developer.Module#DeveloperModule'}
 ];
 
 @NgModule({

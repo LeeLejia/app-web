@@ -26,7 +26,7 @@
                   <div class="form-input">
                     <div class="form-unit">
                       <label class="input-tips" style="display: none;">密码</label>
-                      <input type="password" [(ngModel)]="password" class="qc-log-input-text lg J-password" placeholder="密码" />
+                      <input type="password" [(ngModel)]="password" (keyup.enter)="login()" class="qc-log-input-text lg J-password" placeholder="密码" />
                     </div>
                   </div>
                 </li>

@@ -27,7 +27,7 @@ export class AuthenticationService {
      */
     login(params) {
         const headers = new Headers();
-        console.log(`${utils.getApiPrefix()}/${config.api.login}`);
+        console.log(`${utils.getApiPrefix()}${config.api.login}`);
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
         return this.http.post(`${utils.getApiPrefix()}${config.api.login}`, utils.parseParam({
             ...params,
