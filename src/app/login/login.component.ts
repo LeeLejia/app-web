@@ -24,6 +24,7 @@ export class LoginComponent {
       pwd: this.password,
     }).subscribe(null, (res) => {
       console.log(res);
+      // todo 提示错误！！
     });
   }
 }
