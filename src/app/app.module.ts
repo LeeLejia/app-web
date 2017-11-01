@@ -17,11 +17,11 @@ import {ToastComponent, ToastMsg} from './share/toast/toast';
 export const routers = [
   {
     path: '',
-    redirectTo: config.api.login.substr(1),
+    redirectTo: config.urls.login.substr(1),
     pathMatch: 'full'
   },
-  {path: config.api.login.substr(1), component: LoginComponent},
-  {path: config.api.register.substr(1), component: RegisterComponent},
+  {path: config.urls.login.substr(1), component: LoginComponent},
+  {path: config.urls.register.substr(1), component: RegisterComponent},
   {path: config.roles.developer.home.substr(1), loadChildren: './developer/developer.Module#DeveloperModule'}
 ];
 
